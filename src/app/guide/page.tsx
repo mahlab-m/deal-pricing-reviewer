@@ -100,9 +100,9 @@ export default function GuidePage() {
           <div className="rounded border border-gray-200 overflow-hidden">
             <table className="w-full text-xs">
               <thead>
-                <tr className="border-b border-gray-200 bg-gray-50">
-                  <th className="text-left px-3 py-2 text-gray-500 font-medium uppercase tracking-wide w-40">Lens</th>
-                  <th className="text-left px-3 py-2 text-gray-500 font-medium uppercase tracking-wide">Logic</th>
+                <tr className="border-b border-gray-200 bg-gray-800">
+                  <th className="text-left px-3 py-2 text-white font-medium uppercase tracking-wide w-40">Lens</th>
+                  <th className="text-left px-3 py-2 text-white font-medium uppercase tracking-wide">Logic</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
@@ -131,9 +131,9 @@ export default function GuidePage() {
           <div className="rounded border border-gray-200 overflow-hidden">
             <table className="w-full text-xs">
               <thead>
-                <tr className="border-b border-gray-200 bg-gray-50">
-                  <th className="text-left px-3 py-2 text-gray-500 font-medium uppercase tracking-wide w-52">Archetype</th>
-                  <th className="text-left px-3 py-2 text-gray-500 font-medium uppercase tracking-wide">Description</th>
+                <tr className="border-b border-gray-200 bg-gray-800">
+                  <th className="text-left px-3 py-2 text-white font-medium uppercase tracking-wide w-52">Archetype</th>
+                  <th className="text-left px-3 py-2 text-white font-medium uppercase tracking-wide">Description</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
@@ -159,9 +159,9 @@ export default function GuidePage() {
           <div className="rounded border border-gray-200 overflow-hidden">
             <table className="w-full text-xs">
               <thead>
-                <tr className="border-b border-gray-200 bg-gray-50">
-                  <th className="text-left px-3 py-2 text-gray-500 font-medium uppercase tracking-wide w-48">Action</th>
-                  <th className="text-left px-3 py-2 text-gray-500 font-medium uppercase tracking-wide">Description</th>
+                <tr className="border-b border-gray-200 bg-gray-800">
+                  <th className="text-left px-3 py-2 text-white font-medium uppercase tracking-wide w-48">Action</th>
+                  <th className="text-left px-3 py-2 text-white font-medium uppercase tracking-wide">Description</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
@@ -189,21 +189,30 @@ export default function GuidePage() {
             The rate card has 96 cells: 8 lanes × 4 tonnage tiers (1–5 t, 5–10 t, 10–20 t,
             20+ t) × 3 vehicle types (flatbed, curtainsider, reefer). Each cell defines:
           </p>
-          <ul className="mt-3 space-y-1 text-xs text-gray-600">
-            <li>
-              <code className="font-mono bg-gray-100 px-1 rounded text-gray-700">carrier_cost_floor_usd</code> — the minimum carrier
-              cost, derived from fuel cost (PKR) + fixed costs, converted at 280 PKR/USD. A 45%
-              fuel component factor means fuel price changes shift only part of the floor.
-            </li>
-            <li className="mt-1">
-              <code className="font-mono bg-gray-100 px-1 rounded text-gray-700">band_lower_usd</code> — floor × 1.05 (minimum
-              viable price with 5% margin)
-            </li>
-            <li className="mt-1">
-              <code className="font-mono bg-gray-100 px-1 rounded text-gray-700">band_upper_usd</code> — floor × 1.35 (ceiling above
-              which we are over-priced vs. market)
-            </li>
-          </ul>
+          <div className="rounded border border-gray-200 overflow-hidden mt-3">
+            <table className="w-full text-xs">
+              <thead>
+                <tr className="border-b border-gray-200 bg-gray-800">
+                  <th className="text-left px-3 py-2 text-white font-medium uppercase tracking-wide w-52">Field</th>
+                  <th className="text-left px-3 py-2 text-white font-medium uppercase tracking-wide">Definition</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                <tr className="hover:bg-gray-50">
+                  <td className="px-3 py-2.5"><code className="font-mono bg-gray-100 px-1 rounded text-gray-700">carrier_cost_floor_usd</code></td>
+                  <td className="px-3 py-2.5 text-gray-500">Minimum carrier cost — fuel cost (PKR) + fixed costs, converted at 280 PKR/USD. A 45% fuel component means fuel price swings shift only part of the floor.</td>
+                </tr>
+                <tr className="hover:bg-gray-50">
+                  <td className="px-3 py-2.5"><code className="font-mono bg-gray-100 px-1 rounded text-gray-700">band_lower_usd</code></td>
+                  <td className="px-3 py-2.5 text-gray-500">floor × 1.05 — minimum viable price with 5% margin</td>
+                </tr>
+                <tr className="hover:bg-gray-50">
+                  <td className="px-3 py-2.5"><code className="font-mono bg-gray-100 px-1 rounded text-gray-700">band_upper_usd</code></td>
+                  <td className="px-3 py-2.5 text-gray-500">floor × 1.35 — ceiling above which we are over-priced vs. market</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </Section>
 
         <Section title="Make automation scenario">
@@ -351,11 +360,11 @@ function CheckTable({
     <div className="rounded border border-gray-200 overflow-hidden">
       <table className="w-full text-xs">
         <thead>
-          <tr className="border-b border-gray-200 bg-gray-50">
-            <th className="text-left px-3 py-2 text-gray-500 font-medium uppercase tracking-wide w-32">Rule</th>
-            <th className="text-left px-3 py-2 text-gray-500 font-medium uppercase tracking-wide">What it checks</th>
-            <th className="text-left px-3 py-2 text-emerald-600 font-medium uppercase tracking-wide">Pass</th>
-            <th className="text-left px-3 py-2 text-red-600 font-medium uppercase tracking-wide">Fail</th>
+          <tr className="border-b border-gray-200 bg-gray-800">
+            <th className="text-left px-3 py-2 text-white font-medium uppercase tracking-wide w-32">Rule</th>
+            <th className="text-left px-3 py-2 text-white font-medium uppercase tracking-wide">What it checks</th>
+            <th className="text-left px-3 py-2 text-emerald-300 font-medium uppercase tracking-wide">Pass</th>
+            <th className="text-left px-3 py-2 text-red-300 font-medium uppercase tracking-wide">Fail</th>
           </tr>
         </thead>
         <tbody className="divide-y divide-gray-100">

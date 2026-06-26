@@ -99,7 +99,7 @@ export default function PortfolioPage() {
                   <td className="px-4 py-3 text-center">
                     {flagged > 0 ? (
                       <span className="text-red-600 font-medium">
-                        {flagged}<span className="text-gray-300 font-normal">/{total}</span>
+                        {flagged}<span className="text-gray-700 font-normal">/{total}</span>
                       </span>
                     ) : (
                       <span className="text-gray-400">{total}</span>
