@@ -18,76 +18,54 @@ export default function ReportPage() {
   const { summary, action_queue, health_deltas, period_label, markdown } = report;
 
   return (
-    <div className="min-h-screen bg-slate-950">
+    <div className="min-h-screen bg-gray-50">
       <NavBar />
       <main className="max-w-5xl mx-auto px-6 py-8">
 
         {/* Header */}
         <div className="mb-8">
-          <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-xl font-semibold text-white">Weekly Report</h1>
-              <p className="text-sm text-slate-500 mt-1">{period_label}</p>
-            </div>
-            <div className="text-xs text-slate-600 bg-slate-900 border border-slate-800 rounded px-3 py-2">
-              <span className="text-slate-500">Endpoint:</span>{" "}
-              <code className="font-mono text-slate-400">GET /api/weekly-report</code>
-            </div>
-          </div>
-        </div>
-
-        {/* Make callout */}
-        <div className="bg-slate-900 border border-blue-900 rounded-lg px-5 py-4 mb-8 flex items-start gap-4">
-          <div className="w-2 h-2 rounded-full bg-blue-400 mt-1.5 shrink-0" />
-          <div>
-            <div className="text-sm font-medium text-slate-200">Make scenario target</div>
-            <div className="text-xs text-slate-500 mt-1 leading-relaxed">
-              In Make, an HTTP module calls{" "}
-              <code className="font-mono bg-slate-800 px-1 rounded text-slate-400">GET /api/weekly-report</code>{" "}
-              on a Monday 09:00 schedule. The JSON response below is what Make receives and routes
-              to email or Slack per owner. See the Guide tab for the full scenario spec.
-            </div>
-          </div>
+          <h1 className="text-xl font-semibold text-gray-900">Weekly Report</h1>
+          <p className="text-sm text-gray-500 mt-1">{period_label}</p>
         </div>
 
         {/* Summary stats */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-          <StatCard label="In-Policy" value={`${summary.in_policy_pct}%`} sub={`${summary.in_policy} / ${summary.total_deals} deals`} color="emerald" />
-          <StatCard label="Flagged" value={String(summary.flagged)} sub="need action" color="red" />
-          <StatCard label="At Risk" value={String(summary.shippers_red)} sub="red on any lens" color="red" />
-          <StatCard label="On Watch" value={String(summary.shippers_yellow)} sub="yellow on any lens" color="amber" />
+          <StatCard label="In-Policy" value={`${summary.in_policy_pct}%`}   sub={`${summary.in_policy} / ${summary.total_deals} deals`} color="emerald" />
+          <StatCard label="Flagged"   value={String(summary.flagged)}        sub="need action"        color="red"    />
+          <StatCard label="At Risk"   value={String(summary.shippers_red)}   sub="red on any lens"   color="red"    />
+          <StatCard label="On Watch"  value={String(summary.shippers_yellow)} sub="yellow on any lens" color="amber" />
         </div>
 
-        {/* Action queue by owner */}
+        {/* Actions by owner */}
         <div className="mb-8">
-          <h2 className="text-sm font-semibold text-slate-300 mb-4">Actions by Owner</h2>
+          <h2 className="text-sm font-semibold text-gray-700 mb-4">Actions by Owner</h2>
           <div className="grid grid-cols-1 gap-4">
             {(["Vertical Lead", "Collections Owner", "Commercial Manager"] as const).map((owner) => {
               const items = action_queue.by_owner[owner];
               return (
-                <div key={owner} className="bg-slate-900 rounded-lg border border-slate-800 p-4">
+                <div key={owner} className="bg-white rounded-lg border border-gray-200 p-4">
                   <div className="flex items-center justify-between mb-3">
-                    <span className="text-sm font-medium text-slate-300">{owner}</span>
-                    <span className="text-xs text-slate-600">{items.length} action{items.length !== 1 ? "s" : ""}</span>
+                    <span className="text-sm font-medium text-gray-700">{owner}</span>
+                    <span className="text-xs text-gray-400">{items.length} action{items.length !== 1 ? "s" : ""}</span>
                   </div>
                   {items.length === 0 ? (
-                    <p className="text-xs text-slate-700">No actions this week.</p>
+                    <p className="text-xs text-gray-300">No actions this week.</p>
                   ) : (
                     <div className="space-y-2">
                       {items.map((e) => (
                         <div key={e.entry_id} className="flex items-start gap-3 text-xs">
                           <span className={`shrink-0 font-bold px-1.5 py-0.5 rounded border ${
                             e.priority === "P0"
-                              ? "bg-red-950 text-red-400 border-red-900"
-                              : "bg-slate-800 text-slate-400 border-slate-700"
+                              ? "bg-red-50 text-red-700 border-red-200"
+                              : "bg-gray-100 text-gray-500 border-gray-200"
                           }`}>
                             {e.priority}
                           </span>
                           <div>
-                            <span className="text-slate-300 font-medium">{e.shipper_id}</span>
-                            <span className="text-slate-600 mx-1">—</span>
-                            <span className="text-slate-400">{ACTION_LABELS[e.recommended_action] ?? e.recommended_action}</span>
-                            <p className="text-slate-600 mt-0.5 leading-relaxed">{e.rationale}</p>
+                            <span className="text-gray-800 font-medium">{e.shipper_id}</span>
+                            <span className="text-gray-300 mx-1">—</span>
+                            <span className="text-gray-600">{ACTION_LABELS[e.recommended_action] ?? e.recommended_action}</span>
+                            <p className="text-gray-400 mt-0.5 leading-relaxed">{e.rationale}</p>
                           </div>
                         </div>
                       ))}
@@ -101,36 +79,21 @@ export default function ReportPage() {
 
         {/* Health deltas */}
         <div className="mb-8">
-          <h2 className="text-sm font-semibold text-slate-300 mb-4">Portfolio Health — Month-on-Month</h2>
-          <div className="rounded-lg border border-slate-800 overflow-x-auto">
+          <h2 className="text-sm font-semibold text-gray-700 mb-4">Portfolio Health — Month-on-Month</h2>
+          <div className="rounded-lg border border-gray-200 overflow-x-auto bg-white">
             <table className="w-full min-w-[600px] text-xs">
               <thead>
-                <tr className="border-b border-slate-800 bg-slate-900/60">
+                <tr className="border-b border-gray-200 bg-gray-50">
                   {["Shipper", "Health", "Trend", "Margin Δ", "Take Rate Δ", "Overdue Δ"].map((h) => (
-                    <th key={h} className="text-left px-4 py-2.5 text-slate-500 font-medium uppercase tracking-wide">
-                      {h}
-                    </th>
+                    <th key={h} className="text-left px-4 py-2.5 text-gray-400 font-medium uppercase tracking-wide">{h}</th>
                   ))}
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-800/60">
-                {health_deltas.map((d) => (
-                  <DeltaRow key={d.shipper_id} delta={d} />
-                ))}
+              <tbody className="divide-y divide-gray-100">
+                {health_deltas.map((d) => <DeltaRow key={d.shipper_id} delta={d} />)}
               </tbody>
             </table>
           </div>
-        </div>
-
-        {/* Markdown preview */}
-        <div>
-          <h2 className="text-sm font-semibold text-slate-300 mb-3">
-            Email / Slack body{" "}
-            <span className="text-slate-600 font-normal">— what Make sends</span>
-          </h2>
-          <pre className="bg-slate-900 border border-slate-800 rounded-lg px-5 py-4 text-xs text-slate-400 leading-relaxed overflow-x-auto whitespace-pre-wrap">
-            {markdown}
-          </pre>
         </div>
 
       </main>
@@ -139,44 +102,27 @@ export default function ReportPage() {
 }
 
 const ACTION_LABELS: Record<string, string> = {
-  price_up: "Price Up",
-  take_rate_enhancement: "Take Rate Enhancement",
-  volume_cap: "Volume Cap",
-  collection_sprint: "Collection Sprint",
-  reduce_credit_terms: "Reduce Credit Terms",
-  tolerate_strategic: "Tolerate (Strategic)",
+  price_up: "Price Up", take_rate_enhancement: "Take Rate Enhancement",
+  volume_cap: "Volume Cap", collection_sprint: "Collection Sprint",
+  reduce_credit_terms: "Reduce Credit Terms", tolerate_strategic: "Tolerate (Strategic)",
   replace_or_remove: "Replace / Remove",
 };
 
 function DeltaRow({ delta }: { delta: HealthDelta }) {
   const fmt = (n: number | null, invert = false) => {
-    if (n === null) return <span className="text-slate-700">—</span>;
+    if (n === null) return <span className="text-gray-300">—</span>;
     const positive = invert ? n < 0 : n > 0;
     const neutral = Math.abs(n) <= 0.5;
-    const color = neutral
-      ? "text-slate-500"
-      : positive
-      ? "text-emerald-400"
-      : "text-red-400";
-    const sign = n > 0 ? "+" : "";
-    return <span className={color}>{sign}{n}pp</span>;
+    const color = neutral ? "text-gray-400" : positive ? "text-emerald-600" : "text-red-600";
+    return <span className={color}>{n > 0 ? "+" : ""}{n}pp</span>;
   };
-
-  const trendIcon = delta.trend === "improving" ? "↑" : delta.trend === "deteriorating" ? "↓" : "→";
-  const trendColor =
-    delta.trend === "improving"
-      ? "text-emerald-400"
-      : delta.trend === "deteriorating"
-      ? "text-red-400"
-      : "text-slate-500";
-
+  const trendColor = delta.trend === "improving" ? "text-emerald-600" : delta.trend === "deteriorating" ? "text-red-600" : "text-gray-400";
+  const trendLabel = delta.trend === "improving" ? "Improving" : delta.trend === "deteriorating" ? "Declining" : "Stable";
   return (
-    <tr className="hover:bg-slate-800/30 transition-colors">
-      <td className="px-4 py-2.5 text-slate-300">{delta.name}</td>
-      <td className="px-4 py-2.5">
-        <HealthDot status={delta.health} />
-      </td>
-      <td className={`px-4 py-2.5 font-medium ${trendColor}`}>{trendIcon}</td>
+    <tr className="hover:bg-gray-50 transition-colors">
+      <td className="px-4 py-2.5 text-gray-700">{delta.name}</td>
+      <td className="px-4 py-2.5"><HealthDot status={delta.health} /></td>
+      <td className={`px-4 py-2.5 font-medium ${trendColor}`}>{trendLabel}</td>
       <td className="px-4 py-2.5">{fmt(delta.deltas.margin_pct)}</td>
       <td className="px-4 py-2.5">{fmt(delta.deltas.take_rate_pct)}</td>
       <td className="px-4 py-2.5">{fmt(delta.deltas.overdue_ratio, true)}</td>
@@ -185,26 +131,19 @@ function DeltaRow({ delta }: { delta: HealthDelta }) {
 }
 
 function HealthDot({ status }: { status: HealthStatus }) {
-  const color = {
-    green: "bg-emerald-500",
-    yellow: "bg-amber-400",
-    red: "bg-red-500",
-    unscored: "bg-slate-600",
-  }[status];
-  return <span className={`inline-block w-2 h-2 rounded-full ${color}`} />;
+  const color = { green: "bg-emerald-500", yellow: "bg-amber-400", red: "bg-red-500", unscored: "bg-gray-300" }[status];
+  return <span className={`inline-block w-3 h-3 rounded-full ${color}`} />;
 }
 
-function StatCard({
-  label, value, sub, color,
-}: {
+function StatCard({ label, value, sub, color }: {
   label: string; value: string; sub: string; color: "emerald" | "red" | "amber";
 }) {
-  const valueColor = { emerald: "text-emerald-400", red: "text-red-400", amber: "text-amber-400" }[color];
+  const valueColor = { emerald: "text-emerald-600", red: "text-red-600", amber: "text-amber-600" }[color];
   return (
-    <div className="bg-slate-900 rounded-lg border border-slate-800 px-4 py-4">
-      <div className="text-xs text-slate-500 font-medium uppercase tracking-wide">{label}</div>
+    <div className="bg-white rounded-lg border border-gray-200 px-4 py-4">
+      <div className="text-xs text-gray-400 font-medium uppercase tracking-wide">{label}</div>
       <div className={`text-2xl font-bold mt-1 ${valueColor}`}>{value}</div>
-      <div className="text-xs text-slate-600 mt-0.5">{sub}</div>
+      <div className="text-xs text-gray-400 mt-0.5">{sub}</div>
     </div>
   );
 }

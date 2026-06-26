@@ -39,56 +39,33 @@ export default function TrendChart({ history }: Props) {
   return (
     <ResponsiveContainer width="100%" height={220}>
       <LineChart data={data} margin={{ top: 4, right: 16, left: -16, bottom: 0 }}>
-        <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
+        <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
         <XAxis
           dataKey="month"
-          tick={{ fill: "#64748b", fontSize: 11 }}
-          axisLine={{ stroke: "#1e293b" }}
+          tick={{ fill: "#9ca3af", fontSize: 11 }}
+          axisLine={{ stroke: "#e5e7eb" }}
           tickLine={false}
         />
         <YAxis
-          tick={{ fill: "#64748b", fontSize: 11 }}
+          tick={{ fill: "#9ca3af", fontSize: 11 }}
           axisLine={false}
           tickLine={false}
           unit="%"
         />
         <Tooltip
           contentStyle={{
-            background: "#0f172a",
-            border: "1px solid #1e293b",
+            background: "#ffffff",
+            border: "1px solid #e5e7eb",
             borderRadius: 6,
             fontSize: 12,
-            color: "#94a3b8",
+            color: "#6b7280",
           }}
-          labelStyle={{ color: "#e2e8f0", fontWeight: 600 }}
+          labelStyle={{ color: "#111827", fontWeight: 600 }}
         />
-        <Legend
-          wrapperStyle={{ fontSize: 11, color: "#64748b", paddingTop: 8 }}
-        />
-        <Line
-          type="monotone"
-          dataKey="Margin %"
-          stroke="#34d399"
-          strokeWidth={1.5}
-          dot={false}
-          activeDot={{ r: 3 }}
-        />
-        <Line
-          type="monotone"
-          dataKey="Take Rate %"
-          stroke="#60a5fa"
-          strokeWidth={1.5}
-          dot={false}
-          activeDot={{ r: 3 }}
-        />
-        <Line
-          type="monotone"
-          dataKey="Overdue %"
-          stroke="#f87171"
-          strokeWidth={1.5}
-          dot={false}
-          activeDot={{ r: 3 }}
-        />
+        <Legend wrapperStyle={{ fontSize: 11, color: "#9ca3af", paddingTop: 8 }} />
+        <Line type="monotone" dataKey="Margin %"    stroke="#10b981" strokeWidth={1.5} dot={false} activeDot={{ r: 3 }} />
+        <Line type="monotone" dataKey="Take Rate %" stroke="#3b82f6" strokeWidth={1.5} dot={false} activeDot={{ r: 3 }} />
+        <Line type="monotone" dataKey="Overdue %"   stroke="#ef4444" strokeWidth={1.5} dot={false} activeDot={{ r: 3 }} />
       </LineChart>
     </ResponsiveContainer>
   );

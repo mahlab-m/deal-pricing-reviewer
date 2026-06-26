@@ -2,11 +2,11 @@ import NavBar from "@/components/NavBar";
 
 export default function GuidePage() {
   return (
-    <div className="min-h-screen bg-slate-950">
+    <div className="min-h-screen bg-gray-50">
       <NavBar />
       <main className="max-w-3xl mx-auto px-6 py-10">
-        <h1 className="text-xl font-semibold text-white mb-1">How This Tool Works</h1>
-        <p className="text-sm text-slate-500 mb-10">
+        <h1 className="text-xl font-semibold text-gray-900 mb-1">How This Tool Works</h1>
+        <p className="text-sm text-gray-500 mb-10">
           A walkthrough of the governance logic, data model, and AI layer.
         </p>
 
@@ -97,19 +97,29 @@ export default function GuidePage() {
             Each shipper gets three independent health scores, derived from the checks above.
             The portfolio view shows them as traffic lights.
           </p>
-          <div className="space-y-3">
-            <LensRow
-              name="Pricing Health"
-              logic="Red if take rate fails or more than 30% of deals are flagged. Yellow if take rate is borderline (5–7%) or some deals are flagged. Green otherwise."
-            />
-            <LensRow
-              name="Collection Health"
-              logic="Red if AR days > 60 or overdue ratio > 20%. Yellow if AR days > 45 or overdue ratio > 12%. Green otherwise."
-            />
-            <LensRow
-              name="Capacity Health"
-              logic="Red if the shipper has flagged deals and is not strategic. Yellow if strategic with flagged deals (tolerated). Green if no flagged deals."
-            />
+          <div className="rounded border border-gray-200 overflow-hidden">
+            <table className="w-full text-xs">
+              <thead>
+                <tr className="border-b border-gray-200 bg-gray-50">
+                  <th className="text-left px-3 py-2 text-gray-500 font-medium uppercase tracking-wide w-40">Lens</th>
+                  <th className="text-left px-3 py-2 text-gray-500 font-medium uppercase tracking-wide">Logic</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                <tr className="hover:bg-gray-50">
+                  <td className="px-3 py-2.5 text-gray-700 font-medium">Pricing Health</td>
+                  <td className="px-3 py-2.5 text-gray-500">Red if take rate fails or more than 30% of deals are flagged. Yellow if take rate is borderline (5–7%) or some deals are flagged. Green otherwise.</td>
+                </tr>
+                <tr className="hover:bg-gray-50">
+                  <td className="px-3 py-2.5 text-gray-700 font-medium">Collection Health</td>
+                  <td className="px-3 py-2.5 text-gray-500">Red if AR days &gt; 60 or overdue ratio &gt; 20%. Yellow if AR days &gt; 45 or overdue ratio &gt; 12%. Green otherwise.</td>
+                </tr>
+                <tr className="hover:bg-gray-50">
+                  <td className="px-3 py-2.5 text-gray-700 font-medium">Capacity Health</td>
+                  <td className="px-3 py-2.5 text-gray-500">Red if the shipper has flagged deals and is not strategic. Yellow if strategic with flagged deals (tolerated). Green if no flagged deals.</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </Section>
 
@@ -118,57 +128,59 @@ export default function GuidePage() {
             Each shipper is tagged with an archetype that describes the primary risk pattern.
             Archetypes are mutually exclusive and exhaustive.
           </p>
-          <div className="space-y-2">
-            {[
-              {
-                key: "Healthy",
-                desc: "Passes all deal and account checks. No action required.",
-              },
-              {
-                key: "Volume-strategic, thin pricing",
-                desc: "Large volume share, flagged as strategic, but portfolio take rate is below 5%. Needs Commercial Manager review — exceptions may be justified.",
-              },
-              {
-                key: "Collection risk, viable pricing",
-                desc: "Pricing is fine, but AR days or overdue ratio is breached. Collections Owner action needed.",
-              },
-              {
-                key: "Dual risk: pricing + collection",
-                desc: "Both pricing and collection checks fail. Highest-severity account type.",
-              },
-              {
-                key: "Lane-specific loss",
-                desc: "Most deals pass, but one or more specific lanes are priced below floor. Surgical repricing needed.",
-              },
-              {
-                key: "Unscored — incomplete data",
-                desc: "Missing take rate, AR days, or overdue ratio. Cannot be assessed until data is filled in.",
-              },
-            ].map((a) => (
-              <div key={a.key} className="bg-slate-900 rounded border border-slate-800 px-4 py-3">
-                <div className="text-xs font-medium text-slate-300">{a.key}</div>
-                <div className="text-xs text-slate-500 mt-0.5">{a.desc}</div>
-              </div>
-            ))}
+          <div className="rounded border border-gray-200 overflow-hidden">
+            <table className="w-full text-xs">
+              <thead>
+                <tr className="border-b border-gray-200 bg-gray-50">
+                  <th className="text-left px-3 py-2 text-gray-500 font-medium uppercase tracking-wide w-52">Archetype</th>
+                  <th className="text-left px-3 py-2 text-gray-500 font-medium uppercase tracking-wide">Description</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                {[
+                  { key: "Healthy", desc: "Passes all deal and account checks. No action required." },
+                  { key: "Volume-strategic, thin pricing", desc: "Large volume share, flagged as strategic, but portfolio take rate is below 5%. Needs Commercial Manager review — exceptions may be justified." },
+                  { key: "Collection risk, viable pricing", desc: "Pricing is fine, but AR days or overdue ratio is breached. Collections Owner action needed." },
+                  { key: "Dual risk: pricing + collection", desc: "Both pricing and collection checks fail. Highest-severity account type." },
+                  { key: "Lane-specific loss", desc: "Most deals pass, but one or more specific lanes are priced below floor. Surgical repricing needed." },
+                  { key: "Unscored — incomplete data", desc: "Missing take rate, AR days, or overdue ratio. Cannot be assessed until data is filled in." },
+                ].map((a) => (
+                  <tr key={a.key} className="hover:bg-gray-50">
+                    <td className="px-3 py-2.5 text-gray-700 font-medium">{a.key}</td>
+                    <td className="px-3 py-2.5 text-gray-500">{a.desc}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </Section>
 
         <Section title="Action queue — what the codes mean">
-          <div className="space-y-2">
-            {[
-              { action: "Price Up", desc: "Proposed price is below the rate card band. Reprice to at least band_lower." },
-              { action: "Take Rate Enhancement", desc: "Account-level margin is thin. Negotiate better rates across the shipper's lanes." },
-              { action: "Volume Cap", desc: "Strategic account with deteriorating terms. Cap new bookings until pricing is fixed." },
-              { action: "Collection Sprint", desc: "AR days or overdue ratio breached. Ops and finance to clear outstanding invoices." },
-              { action: "Reduce Credit Terms", desc: "Credit window is too long relative to payment behaviour. Tighten terms on renewal." },
-              { action: "Tolerate (Strategic)", desc: "Breach exists but the account is flagged strategic. Commercial Manager approved toleration." },
-              { action: "Replace / Remove", desc: "Account fails multiple checks with no strategic justification. Off-board or replace." },
-            ].map((r) => (
-              <div key={r.action} className="flex gap-3 text-xs">
-                <span className="text-slate-300 font-medium w-48 shrink-0">{r.action}</span>
-                <span className="text-slate-500">{r.desc}</span>
-              </div>
-            ))}
+          <div className="rounded border border-gray-200 overflow-hidden">
+            <table className="w-full text-xs">
+              <thead>
+                <tr className="border-b border-gray-200 bg-gray-50">
+                  <th className="text-left px-3 py-2 text-gray-500 font-medium uppercase tracking-wide w-48">Action</th>
+                  <th className="text-left px-3 py-2 text-gray-500 font-medium uppercase tracking-wide">Description</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                {[
+                  { action: "Price Up", desc: "Proposed price is below the rate card band. Reprice to at least band_lower." },
+                  { action: "Take Rate Enhancement", desc: "Account-level margin is thin. Negotiate better rates across the shipper's lanes." },
+                  { action: "Volume Cap", desc: "Strategic account with deteriorating terms. Cap new bookings until pricing is fixed." },
+                  { action: "Collection Sprint", desc: "AR days or overdue ratio breached. Ops and finance to clear outstanding invoices." },
+                  { action: "Reduce Credit Terms", desc: "Credit window is too long relative to payment behaviour. Tighten terms on renewal." },
+                  { action: "Tolerate (Strategic)", desc: "Breach exists but the account is flagged strategic. Commercial Manager approved toleration." },
+                  { action: "Replace / Remove", desc: "Account fails multiple checks with no strategic justification. Off-board or replace." },
+                ].map((r) => (
+                  <tr key={r.action} className="hover:bg-gray-50">
+                    <td className="px-3 py-2.5 text-gray-700 font-medium">{r.action}</td>
+                    <td className="px-3 py-2.5 text-gray-500">{r.desc}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </Section>
 
@@ -177,26 +189,26 @@ export default function GuidePage() {
             The rate card has 96 cells: 8 lanes × 4 tonnage tiers (1–5 t, 5–10 t, 10–20 t,
             20+ t) × 3 vehicle types (flatbed, curtainsider, reefer). Each cell defines:
           </p>
-          <ul className="mt-3 space-y-1 text-xs text-slate-500">
+          <ul className="mt-3 space-y-1 text-xs text-gray-600">
             <li>
-              <span className="text-slate-300">carrier_cost_floor_usd</span> — the minimum carrier
+              <code className="font-mono bg-gray-100 px-1 rounded text-gray-700">carrier_cost_floor_usd</code> — the minimum carrier
               cost, derived from fuel cost (PKR) + fixed costs, converted at 280 PKR/USD. A 45%
               fuel component factor means fuel price changes shift only part of the floor.
             </li>
             <li className="mt-1">
-              <span className="text-slate-300">band_lower_usd</span> — floor × 1.05 (minimum
+              <code className="font-mono bg-gray-100 px-1 rounded text-gray-700">band_lower_usd</code> — floor × 1.05 (minimum
               viable price with 5% margin)
             </li>
             <li className="mt-1">
-              <span className="text-slate-300">band_upper_usd</span> — floor × 1.35 (ceiling above
-              which Trella is over-priced vs. market)
+              <code className="font-mono bg-gray-100 px-1 rounded text-gray-700">band_upper_usd</code> — floor × 1.35 (ceiling above
+              which we are over-priced vs. market)
             </li>
           </ul>
         </Section>
 
         <Section title="Make automation scenario">
           <p className="mb-4">
-            The <strong className="text-slate-300">Weekly Report</strong> tab shows what a Make scenario
+            The <strong className="text-gray-700">Weekly Report</strong> tab shows what a Make scenario
             would send every Monday. Here is the exact module sequence to wire it up:
           </p>
           <div className="space-y-3 mb-5">
@@ -237,43 +249,43 @@ export default function GuidePage() {
                 desc: "Final module (outside the router). Always runs. Sends the full {{2.markdown}} to yourself as the weekly governance digest.",
               },
             ].map((m) => (
-              <div key={m.n} className="bg-slate-900 rounded border border-slate-800 px-4 py-3 flex gap-3">
-                <div className="w-6 h-6 rounded-full bg-slate-700 text-slate-300 text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
+              <div key={m.n} className="bg-white rounded border border-gray-200 px-4 py-3 flex gap-3">
+                <div className="w-6 h-6 rounded-full bg-gray-200 text-gray-600 text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
                   {m.n}
                 </div>
                 <div>
-                  <div className="text-xs font-semibold text-slate-300">{m.label}</div>
-                  <div className="text-xs text-slate-500 mt-0.5">{m.desc}</div>
+                  <div className="text-xs font-semibold text-gray-700">{m.label}</div>
+                  <div className="text-xs text-gray-500 mt-0.5">{m.desc}</div>
                 </div>
               </div>
             ))}
           </div>
-          <p className="text-xs text-slate-600">
+          <p className="text-xs text-gray-500">
             For the demo MVP, stop at module 2 — the HTTP call returning the JSON is enough to
             show the pattern. Add the Router and Gmail modules when you want to send real emails.
           </p>
         </Section>
 
         <Section title="Running the AI agent">
-          <ol className="space-y-3 text-xs text-slate-400 list-decimal list-inside">
+          <ol className="space-y-3 text-xs text-gray-600 list-decimal list-inside">
             <li>
-              Set <code className="font-mono bg-slate-800 px-1 rounded text-slate-300">ANTHROPIC_API_KEY</code>{" "}
-              in <code className="font-mono bg-slate-800 px-1 rounded text-slate-300">.env.local</code> to a real key.
+              Set <code className="font-mono bg-gray-100 px-1 rounded text-gray-700">ANTHROPIC_API_KEY</code>{" "}
+              in <code className="font-mono bg-gray-100 px-1 rounded text-gray-700">.env.local</code> to a real key.
             </li>
             <li>
-              Call <code className="font-mono bg-slate-800 px-1 rounded text-slate-300">POST /api/review</code> — no body needed.
+              Call <code className="font-mono bg-gray-100 px-1 rounded text-gray-700">POST /api/review</code> — no body needed.
               The endpoint loads all data, runs the deterministic checks, and sends only the flagged
               deals to the agent.
             </li>
             <li>
-              The agent uses one tool — <code className="font-mono bg-slate-800 px-1 rounded text-slate-300">lookup_rate_card_cell</code> — to
+              The agent uses one tool — <code className="font-mono bg-gray-100 px-1 rounded text-gray-700">lookup_rate_card_cell</code> — to
               fetch the rate card for a specific lane/tier/vehicle combination. It runs up to 3
               turns before producing a final verdict.
             </li>
             <li>
-              Verdict options: <span className="text-emerald-400">approve_exception</span> (price
-              defensible given context), <span className="text-red-400">reject</span> (reprice
-              required), or <span className="text-amber-400">escalate</span> (ambiguous — send to
+              Verdict options: <span className="text-emerald-700">approve_exception</span> (price
+              defensible given context), <span className="text-red-600">reject</span> (reprice
+              required), or <span className="text-amber-600">escalate</span> (ambiguous — send to
               human).
             </li>
             <li>
@@ -296,10 +308,10 @@ function Section({
 }) {
   return (
     <section className="mb-10">
-      <h2 className="text-sm font-semibold text-slate-300 mb-3 pb-2 border-b border-slate-800">
+      <h2 className="text-sm font-semibold text-gray-700 mb-3 pb-2 border-b border-gray-200">
         {title}
       </h2>
-      <div className="text-sm text-slate-400 leading-relaxed">{children}</div>
+      <div className="text-sm text-gray-500 leading-relaxed">{children}</div>
     </section>
   );
 }
@@ -315,16 +327,16 @@ function Layer({
   color: "emerald" | "blue";
   description: string;
 }) {
-  const dotColor = color === "emerald" ? "bg-emerald-400" : "bg-blue-400";
-  const textColor = color === "emerald" ? "text-emerald-400" : "text-blue-400";
+  const dotColor = color === "emerald" ? "bg-emerald-600" : "bg-blue-600";
+  const textColor = color === "emerald" ? "text-emerald-700" : "text-blue-700";
   return (
-    <div className="bg-slate-900 rounded border border-slate-800 px-4 py-3 flex gap-3">
+    <div className="bg-white rounded border border-gray-200 px-4 py-3 flex gap-3">
       <div className={`w-5 h-5 rounded-full ${dotColor} text-slate-950 text-xs font-bold flex items-center justify-center shrink-0 mt-0.5`}>
         {number}
       </div>
       <div>
         <div className={`text-xs font-semibold ${textColor}`}>{label}</div>
-        <div className="text-xs text-slate-500 mt-1">{description}</div>
+        <div className="text-xs text-gray-400 mt-1">{description}</div>
       </div>
     </div>
   );
@@ -336,23 +348,23 @@ function CheckTable({
   rows: { rule: string; what: string; pass: string; fail: string }[];
 }) {
   return (
-    <div className="rounded border border-slate-800 overflow-hidden">
+    <div className="rounded border border-gray-200 overflow-hidden">
       <table className="w-full text-xs">
         <thead>
-          <tr className="border-b border-slate-800 bg-slate-900/60">
-            <th className="text-left px-3 py-2 text-slate-500 font-medium uppercase tracking-wide w-32">Rule</th>
-            <th className="text-left px-3 py-2 text-slate-500 font-medium uppercase tracking-wide">What it checks</th>
+          <tr className="border-b border-gray-200 bg-gray-50">
+            <th className="text-left px-3 py-2 text-gray-500 font-medium uppercase tracking-wide w-32">Rule</th>
+            <th className="text-left px-3 py-2 text-gray-500 font-medium uppercase tracking-wide">What it checks</th>
             <th className="text-left px-3 py-2 text-emerald-600 font-medium uppercase tracking-wide">Pass</th>
-            <th className="text-left px-3 py-2 text-red-700 font-medium uppercase tracking-wide">Fail</th>
+            <th className="text-left px-3 py-2 text-red-600 font-medium uppercase tracking-wide">Fail</th>
           </tr>
         </thead>
-        <tbody className="divide-y divide-slate-800/60">
+        <tbody className="divide-y divide-gray-100">
           {rows.map((r) => (
-            <tr key={r.rule} className="hover:bg-slate-800/30">
-              <td className="px-3 py-2.5 text-slate-300 font-medium">{r.rule}</td>
-              <td className="px-3 py-2.5 text-slate-500">{r.what}</td>
-              <td className="px-3 py-2.5 text-emerald-500">{r.pass}</td>
-              <td className="px-3 py-2.5 text-red-400">{r.fail}</td>
+            <tr key={r.rule} className="hover:bg-gray-50">
+              <td className="px-3 py-2.5 text-gray-700 font-medium">{r.rule}</td>
+              <td className="px-3 py-2.5 text-gray-500">{r.what}</td>
+              <td className="px-3 py-2.5 text-emerald-600">{r.pass}</td>
+              <td className="px-3 py-2.5 text-red-600">{r.fail}</td>
             </tr>
           ))}
         </tbody>
@@ -361,11 +373,3 @@ function CheckTable({
   );
 }
 
-function LensRow({ name, logic }: { name: string; logic: string }) {
-  return (
-    <div className="flex gap-3 text-xs">
-      <span className="text-slate-300 font-medium w-36 shrink-0">{name}</span>
-      <span className="text-slate-500">{logic}</span>
-    </div>
-  );
-}
