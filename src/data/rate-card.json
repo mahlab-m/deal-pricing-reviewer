@@ -1,0 +1,770 @@
+[
+  {
+    "lane": "Karachi → Lahore",
+    "tonnage_tier": "<5T",
+    "vehicle_type": "20 Ft",
+    "carrier_cost_floor_usd": 82.45,
+    "band_lower_usd": 86.57,
+    "band_upper_usd": 111.31
+  },
+  {
+    "lane": "Karachi → Lahore",
+    "tonnage_tier": "<5T",
+    "vehicle_type": "40 Ft",
+    "carrier_cost_floor_usd": 65.96,
+    "band_lower_usd": 69.26,
+    "band_upper_usd": 89.04
+  },
+  {
+    "lane": "Karachi → Lahore",
+    "tonnage_tier": "<5T",
+    "vehicle_type": "Mazda 17ft",
+    "carrier_cost_floor_usd": 111.31,
+    "band_lower_usd": 116.87,
+    "band_upper_usd": 150.26
+  },
+  {
+    "lane": "Karachi → Lahore",
+    "tonnage_tier": "5-10T",
+    "vehicle_type": "20 Ft",
+    "carrier_cost_floor_usd": 64.41,
+    "band_lower_usd": 67.63,
+    "band_upper_usd": 86.96
+  },
+  {
+    "lane": "Karachi → Lahore",
+    "tonnage_tier": "5-10T",
+    "vehicle_type": "40 Ft",
+    "carrier_cost_floor_usd": 51.53,
+    "band_lower_usd": 54.11,
+    "band_upper_usd": 69.57
+  },
+  {
+    "lane": "Karachi → Lahore",
+    "tonnage_tier": "5-10T",
+    "vehicle_type": "Mazda 17ft",
+    "carrier_cost_floor_usd": 86.96,
+    "band_lower_usd": 91.31,
+    "band_upper_usd": 117.39
+  },
+  {
+    "lane": "Karachi → Lahore",
+    "tonnage_tier": "10-20T",
+    "vehicle_type": "20 Ft",
+    "carrier_cost_floor_usd": 51.53,
+    "band_lower_usd": 54.11,
+    "band_upper_usd": 69.57
+  },
+  {
+    "lane": "Karachi → Lahore",
+    "tonnage_tier": "10-20T",
+    "vehicle_type": "40 Ft",
+    "carrier_cost_floor_usd": 41.22,
+    "band_lower_usd": 43.29,
+    "band_upper_usd": 55.65
+  },
+  {
+    "lane": "Karachi → Lahore",
+    "tonnage_tier": "10-20T",
+    "vehicle_type": "Mazda 17ft",
+    "carrier_cost_floor_usd": 69.57,
+    "band_lower_usd": 73.04,
+    "band_upper_usd": 93.91
+  },
+  {
+    "lane": "Karachi → Lahore",
+    "tonnage_tier": "20T+",
+    "vehicle_type": "20 Ft",
+    "carrier_cost_floor_usd": 43.8,
+    "band_lower_usd": 45.99,
+    "band_upper_usd": 59.13
+  },
+  {
+    "lane": "Karachi → Lahore",
+    "tonnage_tier": "20T+",
+    "vehicle_type": "40 Ft",
+    "carrier_cost_floor_usd": 35.04,
+    "band_lower_usd": 36.79,
+    "band_upper_usd": 47.3
+  },
+  {
+    "lane": "Karachi → Lahore",
+    "tonnage_tier": "20T+",
+    "vehicle_type": "Mazda 17ft",
+    "carrier_cost_floor_usd": 59.13,
+    "band_lower_usd": 62.09,
+    "band_upper_usd": 79.83
+  },
+  {
+    "lane": "Lahore → Karachi",
+    "tonnage_tier": "<5T",
+    "vehicle_type": "20 Ft",
+    "carrier_cost_floor_usd": 82.45,
+    "band_lower_usd": 86.57,
+    "band_upper_usd": 111.31
+  },
+  {
+    "lane": "Lahore → Karachi",
+    "tonnage_tier": "<5T",
+    "vehicle_type": "40 Ft",
+    "carrier_cost_floor_usd": 65.96,
+    "band_lower_usd": 69.26,
+    "band_upper_usd": 89.04
+  },
+  {
+    "lane": "Lahore → Karachi",
+    "tonnage_tier": "<5T",
+    "vehicle_type": "Mazda 17ft",
+    "carrier_cost_floor_usd": 111.31,
+    "band_lower_usd": 116.87,
+    "band_upper_usd": 150.26
+  },
+  {
+    "lane": "Lahore → Karachi",
+    "tonnage_tier": "5-10T",
+    "vehicle_type": "20 Ft",
+    "carrier_cost_floor_usd": 64.41,
+    "band_lower_usd": 67.63,
+    "band_upper_usd": 86.96
+  },
+  {
+    "lane": "Lahore → Karachi",
+    "tonnage_tier": "5-10T",
+    "vehicle_type": "40 Ft",
+    "carrier_cost_floor_usd": 51.53,
+    "band_lower_usd": 54.11,
+    "band_upper_usd": 69.57
+  },
+  {
+    "lane": "Lahore → Karachi",
+    "tonnage_tier": "5-10T",
+    "vehicle_type": "Mazda 17ft",
+    "carrier_cost_floor_usd": 86.96,
+    "band_lower_usd": 91.31,
+    "band_upper_usd": 117.39
+  },
+  {
+    "lane": "Lahore → Karachi",
+    "tonnage_tier": "10-20T",
+    "vehicle_type": "20 Ft",
+    "carrier_cost_floor_usd": 51.53,
+    "band_lower_usd": 54.11,
+    "band_upper_usd": 69.57
+  },
+  {
+    "lane": "Lahore → Karachi",
+    "tonnage_tier": "10-20T",
+    "vehicle_type": "40 Ft",
+    "carrier_cost_floor_usd": 41.22,
+    "band_lower_usd": 43.29,
+    "band_upper_usd": 55.65
+  },
+  {
+    "lane": "Lahore → Karachi",
+    "tonnage_tier": "10-20T",
+    "vehicle_type": "Mazda 17ft",
+    "carrier_cost_floor_usd": 69.57,
+    "band_lower_usd": 73.04,
+    "band_upper_usd": 93.91
+  },
+  {
+    "lane": "Lahore → Karachi",
+    "tonnage_tier": "20T+",
+    "vehicle_type": "20 Ft",
+    "carrier_cost_floor_usd": 43.8,
+    "band_lower_usd": 45.99,
+    "band_upper_usd": 59.13
+  },
+  {
+    "lane": "Lahore → Karachi",
+    "tonnage_tier": "20T+",
+    "vehicle_type": "40 Ft",
+    "carrier_cost_floor_usd": 35.04,
+    "band_lower_usd": 36.79,
+    "band_upper_usd": 47.3
+  },
+  {
+    "lane": "Lahore → Karachi",
+    "tonnage_tier": "20T+",
+    "vehicle_type": "Mazda 17ft",
+    "carrier_cost_floor_usd": 59.13,
+    "band_lower_usd": 62.09,
+    "band_upper_usd": 79.83
+  },
+  {
+    "lane": "Karachi → Multan",
+    "tonnage_tier": "<5T",
+    "vehicle_type": "20 Ft",
+    "carrier_cost_floor_usd": 57.84,
+    "band_lower_usd": 60.74,
+    "band_upper_usd": 78.09
+  },
+  {
+    "lane": "Karachi → Multan",
+    "tonnage_tier": "<5T",
+    "vehicle_type": "40 Ft",
+    "carrier_cost_floor_usd": 46.27,
+    "band_lower_usd": 48.59,
+    "band_upper_usd": 62.47
+  },
+  {
+    "lane": "Karachi → Multan",
+    "tonnage_tier": "<5T",
+    "vehicle_type": "Mazda 17ft",
+    "carrier_cost_floor_usd": 78.09,
+    "band_lower_usd": 81.99,
+    "band_upper_usd": 105.42
+  },
+  {
+    "lane": "Karachi → Multan",
+    "tonnage_tier": "5-10T",
+    "vehicle_type": "20 Ft",
+    "carrier_cost_floor_usd": 45.19,
+    "band_lower_usd": 47.45,
+    "band_upper_usd": 61.01
+  },
+  {
+    "lane": "Karachi → Multan",
+    "tonnage_tier": "5-10T",
+    "vehicle_type": "40 Ft",
+    "carrier_cost_floor_usd": 36.15,
+    "band_lower_usd": 37.96,
+    "band_upper_usd": 48.8
+  },
+  {
+    "lane": "Karachi → Multan",
+    "tonnage_tier": "5-10T",
+    "vehicle_type": "Mazda 17ft",
+    "carrier_cost_floor_usd": 61.01,
+    "band_lower_usd": 64.06,
+    "band_upper_usd": 82.36
+  },
+  {
+    "lane": "Karachi → Multan",
+    "tonnage_tier": "10-20T",
+    "vehicle_type": "20 Ft",
+    "carrier_cost_floor_usd": 36.15,
+    "band_lower_usd": 37.96,
+    "band_upper_usd": 48.8
+  },
+  {
+    "lane": "Karachi → Multan",
+    "tonnage_tier": "10-20T",
+    "vehicle_type": "40 Ft",
+    "carrier_cost_floor_usd": 28.92,
+    "band_lower_usd": 30.37,
+    "band_upper_usd": 39.04
+  },
+  {
+    "lane": "Karachi → Multan",
+    "tonnage_tier": "10-20T",
+    "vehicle_type": "Mazda 17ft",
+    "carrier_cost_floor_usd": 48.8,
+    "band_lower_usd": 51.25,
+    "band_upper_usd": 65.89
+  },
+  {
+    "lane": "Karachi → Multan",
+    "tonnage_tier": "20T+",
+    "vehicle_type": "20 Ft",
+    "carrier_cost_floor_usd": 30.73,
+    "band_lower_usd": 32.27,
+    "band_upper_usd": 41.48
+  },
+  {
+    "lane": "Karachi → Multan",
+    "tonnage_tier": "20T+",
+    "vehicle_type": "40 Ft",
+    "carrier_cost_floor_usd": 24.58,
+    "band_lower_usd": 25.81,
+    "band_upper_usd": 33.19
+  },
+  {
+    "lane": "Karachi → Multan",
+    "tonnage_tier": "20T+",
+    "vehicle_type": "Mazda 17ft",
+    "carrier_cost_floor_usd": 41.48,
+    "band_lower_usd": 43.56,
+    "band_upper_usd": 56
+  },
+  {
+    "lane": "Multan → Karachi",
+    "tonnage_tier": "<5T",
+    "vehicle_type": "20 Ft",
+    "carrier_cost_floor_usd": 57.84,
+    "band_lower_usd": 60.74,
+    "band_upper_usd": 78.09
+  },
+  {
+    "lane": "Multan → Karachi",
+    "tonnage_tier": "<5T",
+    "vehicle_type": "40 Ft",
+    "carrier_cost_floor_usd": 46.27,
+    "band_lower_usd": 48.59,
+    "band_upper_usd": 62.47
+  },
+  {
+    "lane": "Multan → Karachi",
+    "tonnage_tier": "<5T",
+    "vehicle_type": "Mazda 17ft",
+    "carrier_cost_floor_usd": 78.09,
+    "band_lower_usd": 81.99,
+    "band_upper_usd": 105.42
+  },
+  {
+    "lane": "Multan → Karachi",
+    "tonnage_tier": "5-10T",
+    "vehicle_type": "20 Ft",
+    "carrier_cost_floor_usd": 45.19,
+    "band_lower_usd": 47.45,
+    "band_upper_usd": 61.01
+  },
+  {
+    "lane": "Multan → Karachi",
+    "tonnage_tier": "5-10T",
+    "vehicle_type": "40 Ft",
+    "carrier_cost_floor_usd": 36.15,
+    "band_lower_usd": 37.96,
+    "band_upper_usd": 48.8
+  },
+  {
+    "lane": "Multan → Karachi",
+    "tonnage_tier": "5-10T",
+    "vehicle_type": "Mazda 17ft",
+    "carrier_cost_floor_usd": 61.01,
+    "band_lower_usd": 64.06,
+    "band_upper_usd": 82.36
+  },
+  {
+    "lane": "Multan → Karachi",
+    "tonnage_tier": "10-20T",
+    "vehicle_type": "20 Ft",
+    "carrier_cost_floor_usd": 36.15,
+    "band_lower_usd": 37.96,
+    "band_upper_usd": 48.8
+  },
+  {
+    "lane": "Multan → Karachi",
+    "tonnage_tier": "10-20T",
+    "vehicle_type": "40 Ft",
+    "carrier_cost_floor_usd": 28.92,
+    "band_lower_usd": 30.37,
+    "band_upper_usd": 39.04
+  },
+  {
+    "lane": "Multan → Karachi",
+    "tonnage_tier": "10-20T",
+    "vehicle_type": "Mazda 17ft",
+    "carrier_cost_floor_usd": 48.8,
+    "band_lower_usd": 51.25,
+    "band_upper_usd": 65.89
+  },
+  {
+    "lane": "Multan → Karachi",
+    "tonnage_tier": "20T+",
+    "vehicle_type": "20 Ft",
+    "carrier_cost_floor_usd": 30.73,
+    "band_lower_usd": 32.27,
+    "band_upper_usd": 41.48
+  },
+  {
+    "lane": "Multan → Karachi",
+    "tonnage_tier": "20T+",
+    "vehicle_type": "40 Ft",
+    "carrier_cost_floor_usd": 24.58,
+    "band_lower_usd": 25.81,
+    "band_upper_usd": 33.19
+  },
+  {
+    "lane": "Multan → Karachi",
+    "tonnage_tier": "20T+",
+    "vehicle_type": "Mazda 17ft",
+    "carrier_cost_floor_usd": 41.48,
+    "band_lower_usd": 43.56,
+    "band_upper_usd": 56
+  },
+  {
+    "lane": "Lahore → Islamabad",
+    "tonnage_tier": "<5T",
+    "vehicle_type": "20 Ft",
+    "carrier_cost_floor_usd": 26.37,
+    "band_lower_usd": 27.69,
+    "band_upper_usd": 35.6
+  },
+  {
+    "lane": "Lahore → Islamabad",
+    "tonnage_tier": "<5T",
+    "vehicle_type": "40 Ft",
+    "carrier_cost_floor_usd": 21.09,
+    "band_lower_usd": 22.15,
+    "band_upper_usd": 28.48
+  },
+  {
+    "lane": "Lahore → Islamabad",
+    "tonnage_tier": "<5T",
+    "vehicle_type": "Mazda 17ft",
+    "carrier_cost_floor_usd": 35.6,
+    "band_lower_usd": 37.38,
+    "band_upper_usd": 48.06
+  },
+  {
+    "lane": "Lahore → Islamabad",
+    "tonnage_tier": "5-10T",
+    "vehicle_type": "20 Ft",
+    "carrier_cost_floor_usd": 20.6,
+    "band_lower_usd": 21.63,
+    "band_upper_usd": 27.81
+  },
+  {
+    "lane": "Lahore → Islamabad",
+    "tonnage_tier": "5-10T",
+    "vehicle_type": "40 Ft",
+    "carrier_cost_floor_usd": 16.48,
+    "band_lower_usd": 17.3,
+    "band_upper_usd": 22.25
+  },
+  {
+    "lane": "Lahore → Islamabad",
+    "tonnage_tier": "5-10T",
+    "vehicle_type": "Mazda 17ft",
+    "carrier_cost_floor_usd": 27.81,
+    "band_lower_usd": 29.2,
+    "band_upper_usd": 37.54
+  },
+  {
+    "lane": "Lahore → Islamabad",
+    "tonnage_tier": "10-20T",
+    "vehicle_type": "20 Ft",
+    "carrier_cost_floor_usd": 16.48,
+    "band_lower_usd": 17.3,
+    "band_upper_usd": 22.25
+  },
+  {
+    "lane": "Lahore → Islamabad",
+    "tonnage_tier": "10-20T",
+    "vehicle_type": "40 Ft",
+    "carrier_cost_floor_usd": 13.18,
+    "band_lower_usd": 13.84,
+    "band_upper_usd": 17.8
+  },
+  {
+    "lane": "Lahore → Islamabad",
+    "tonnage_tier": "10-20T",
+    "vehicle_type": "Mazda 17ft",
+    "carrier_cost_floor_usd": 22.25,
+    "band_lower_usd": 23.36,
+    "band_upper_usd": 30.04
+  },
+  {
+    "lane": "Lahore → Islamabad",
+    "tonnage_tier": "20T+",
+    "vehicle_type": "20 Ft",
+    "carrier_cost_floor_usd": 14.01,
+    "band_lower_usd": 14.71,
+    "band_upper_usd": 18.91
+  },
+  {
+    "lane": "Lahore → Islamabad",
+    "tonnage_tier": "20T+",
+    "vehicle_type": "40 Ft",
+    "carrier_cost_floor_usd": 11.21,
+    "band_lower_usd": 11.77,
+    "band_upper_usd": 15.13
+  },
+  {
+    "lane": "Lahore → Islamabad",
+    "tonnage_tier": "20T+",
+    "vehicle_type": "Mazda 17ft",
+    "carrier_cost_floor_usd": 18.91,
+    "band_lower_usd": 19.86,
+    "band_upper_usd": 25.53
+  },
+  {
+    "lane": "Islamabad → Lahore",
+    "tonnage_tier": "<5T",
+    "vehicle_type": "20 Ft",
+    "carrier_cost_floor_usd": 26.37,
+    "band_lower_usd": 27.69,
+    "band_upper_usd": 35.6
+  },
+  {
+    "lane": "Islamabad → Lahore",
+    "tonnage_tier": "<5T",
+    "vehicle_type": "40 Ft",
+    "carrier_cost_floor_usd": 21.09,
+    "band_lower_usd": 22.15,
+    "band_upper_usd": 28.48
+  },
+  {
+    "lane": "Islamabad → Lahore",
+    "tonnage_tier": "<5T",
+    "vehicle_type": "Mazda 17ft",
+    "carrier_cost_floor_usd": 35.6,
+    "band_lower_usd": 37.38,
+    "band_upper_usd": 48.06
+  },
+  {
+    "lane": "Islamabad → Lahore",
+    "tonnage_tier": "5-10T",
+    "vehicle_type": "20 Ft",
+    "carrier_cost_floor_usd": 20.6,
+    "band_lower_usd": 21.63,
+    "band_upper_usd": 27.81
+  },
+  {
+    "lane": "Islamabad → Lahore",
+    "tonnage_tier": "5-10T",
+    "vehicle_type": "40 Ft",
+    "carrier_cost_floor_usd": 16.48,
+    "band_lower_usd": 17.3,
+    "band_upper_usd": 22.25
+  },
+  {
+    "lane": "Islamabad → Lahore",
+    "tonnage_tier": "5-10T",
+    "vehicle_type": "Mazda 17ft",
+    "carrier_cost_floor_usd": 27.81,
+    "band_lower_usd": 29.2,
+    "band_upper_usd": 37.54
+  },
+  {
+    "lane": "Islamabad → Lahore",
+    "tonnage_tier": "10-20T",
+    "vehicle_type": "20 Ft",
+    "carrier_cost_floor_usd": 16.48,
+    "band_lower_usd": 17.3,
+    "band_upper_usd": 22.25
+  },
+  {
+    "lane": "Islamabad → Lahore",
+    "tonnage_tier": "10-20T",
+    "vehicle_type": "40 Ft",
+    "carrier_cost_floor_usd": 13.18,
+    "band_lower_usd": 13.84,
+    "band_upper_usd": 17.8
+  },
+  {
+    "lane": "Islamabad → Lahore",
+    "tonnage_tier": "10-20T",
+    "vehicle_type": "Mazda 17ft",
+    "carrier_cost_floor_usd": 22.25,
+    "band_lower_usd": 23.36,
+    "band_upper_usd": 30.04
+  },
+  {
+    "lane": "Islamabad → Lahore",
+    "tonnage_tier": "20T+",
+    "vehicle_type": "20 Ft",
+    "carrier_cost_floor_usd": 14.01,
+    "band_lower_usd": 14.71,
+    "band_upper_usd": 18.91
+  },
+  {
+    "lane": "Islamabad → Lahore",
+    "tonnage_tier": "20T+",
+    "vehicle_type": "40 Ft",
+    "carrier_cost_floor_usd": 11.21,
+    "band_lower_usd": 11.77,
+    "band_upper_usd": 15.13
+  },
+  {
+    "lane": "Islamabad → Lahore",
+    "tonnage_tier": "20T+",
+    "vehicle_type": "Mazda 17ft",
+    "carrier_cost_floor_usd": 18.91,
+    "band_lower_usd": 19.86,
+    "band_upper_usd": 25.53
+  },
+  {
+    "lane": "Karachi → Hyderabad",
+    "tonnage_tier": "<5T",
+    "vehicle_type": "20 Ft",
+    "carrier_cost_floor_usd": 11.61,
+    "band_lower_usd": 12.19,
+    "band_upper_usd": 15.67
+  },
+  {
+    "lane": "Karachi → Hyderabad",
+    "tonnage_tier": "<5T",
+    "vehicle_type": "40 Ft",
+    "carrier_cost_floor_usd": 9.29,
+    "band_lower_usd": 9.75,
+    "band_upper_usd": 12.54
+  },
+  {
+    "lane": "Karachi → Hyderabad",
+    "tonnage_tier": "<5T",
+    "vehicle_type": "Mazda 17ft",
+    "carrier_cost_floor_usd": 15.67,
+    "band_lower_usd": 16.46,
+    "band_upper_usd": 21.16
+  },
+  {
+    "lane": "Karachi → Hyderabad",
+    "tonnage_tier": "5-10T",
+    "vehicle_type": "20 Ft",
+    "carrier_cost_floor_usd": 9.07,
+    "band_lower_usd": 9.52,
+    "band_upper_usd": 12.24
+  },
+  {
+    "lane": "Karachi → Hyderabad",
+    "tonnage_tier": "5-10T",
+    "vehicle_type": "40 Ft",
+    "carrier_cost_floor_usd": 7.26,
+    "band_lower_usd": 7.62,
+    "band_upper_usd": 9.8
+  },
+  {
+    "lane": "Karachi → Hyderabad",
+    "tonnage_tier": "5-10T",
+    "vehicle_type": "Mazda 17ft",
+    "carrier_cost_floor_usd": 12.24,
+    "band_lower_usd": 12.86,
+    "band_upper_usd": 16.53
+  },
+  {
+    "lane": "Karachi → Hyderabad",
+    "tonnage_tier": "10-20T",
+    "vehicle_type": "20 Ft",
+    "carrier_cost_floor_usd": 7.26,
+    "band_lower_usd": 7.62,
+    "band_upper_usd": 9.8
+  },
+  {
+    "lane": "Karachi → Hyderabad",
+    "tonnage_tier": "10-20T",
+    "vehicle_type": "40 Ft",
+    "carrier_cost_floor_usd": 5.81,
+    "band_lower_usd": 6.1,
+    "band_upper_usd": 7.84
+  },
+  {
+    "lane": "Karachi → Hyderabad",
+    "tonnage_tier": "10-20T",
+    "vehicle_type": "Mazda 17ft",
+    "carrier_cost_floor_usd": 9.8,
+    "band_lower_usd": 10.29,
+    "band_upper_usd": 13.22
+  },
+  {
+    "lane": "Karachi → Hyderabad",
+    "tonnage_tier": "20T+",
+    "vehicle_type": "20 Ft",
+    "carrier_cost_floor_usd": 6.17,
+    "band_lower_usd": 6.48,
+    "band_upper_usd": 8.33
+  },
+  {
+    "lane": "Karachi → Hyderabad",
+    "tonnage_tier": "20T+",
+    "vehicle_type": "40 Ft",
+    "carrier_cost_floor_usd": 4.93,
+    "band_lower_usd": 5.18,
+    "band_upper_usd": 6.66
+  },
+  {
+    "lane": "Karachi → Hyderabad",
+    "tonnage_tier": "20T+",
+    "vehicle_type": "Mazda 17ft",
+    "carrier_cost_floor_usd": 8.33,
+    "band_lower_usd": 8.74,
+    "band_upper_usd": 11.24
+  },
+  {
+    "lane": "Karachi → Faisalabad",
+    "tonnage_tier": "<5T",
+    "vehicle_type": "20 Ft",
+    "carrier_cost_floor_usd": 72.53,
+    "band_lower_usd": 76.16,
+    "band_upper_usd": 97.91
+  },
+  {
+    "lane": "Karachi → Faisalabad",
+    "tonnage_tier": "<5T",
+    "vehicle_type": "40 Ft",
+    "carrier_cost_floor_usd": 58.02,
+    "band_lower_usd": 60.92,
+    "band_upper_usd": 78.33
+  },
+  {
+    "lane": "Karachi → Faisalabad",
+    "tonnage_tier": "<5T",
+    "vehicle_type": "Mazda 17ft",
+    "carrier_cost_floor_usd": 97.91,
+    "band_lower_usd": 102.81,
+    "band_upper_usd": 132.18
+  },
+  {
+    "lane": "Karachi → Faisalabad",
+    "tonnage_tier": "5-10T",
+    "vehicle_type": "20 Ft",
+    "carrier_cost_floor_usd": 56.66,
+    "band_lower_usd": 59.5,
+    "band_upper_usd": 76.49
+  },
+  {
+    "lane": "Karachi → Faisalabad",
+    "tonnage_tier": "5-10T",
+    "vehicle_type": "40 Ft",
+    "carrier_cost_floor_usd": 45.33,
+    "band_lower_usd": 47.6,
+    "band_upper_usd": 61.2
+  },
+  {
+    "lane": "Karachi → Faisalabad",
+    "tonnage_tier": "5-10T",
+    "vehicle_type": "Mazda 17ft",
+    "carrier_cost_floor_usd": 76.49,
+    "band_lower_usd": 80.32,
+    "band_upper_usd": 103.27
+  },
+  {
+    "lane": "Karachi → Faisalabad",
+    "tonnage_tier": "10-20T",
+    "vehicle_type": "20 Ft",
+    "carrier_cost_floor_usd": 45.33,
+    "band_lower_usd": 47.6,
+    "band_upper_usd": 61.2
+  },
+  {
+    "lane": "Karachi → Faisalabad",
+    "tonnage_tier": "10-20T",
+    "vehicle_type": "40 Ft",
+    "carrier_cost_floor_usd": 36.26,
+    "band_lower_usd": 38.08,
+    "band_upper_usd": 48.96
+  },
+  {
+    "lane": "Karachi → Faisalabad",
+    "tonnage_tier": "10-20T",
+    "vehicle_type": "Mazda 17ft",
+    "carrier_cost_floor_usd": 61.2,
+    "band_lower_usd": 64.26,
+    "band_upper_usd": 82.61
+  },
+  {
+    "lane": "Karachi → Faisalabad",
+    "tonnage_tier": "20T+",
+    "vehicle_type": "20 Ft",
+    "carrier_cost_floor_usd": 38.53,
+    "band_lower_usd": 40.46,
+    "band_upper_usd": 52.02
+  },
+  {
+    "lane": "Karachi → Faisalabad",
+    "tonnage_tier": "20T+",
+    "vehicle_type": "40 Ft",
+    "carrier_cost_floor_usd": 30.82,
+    "band_lower_usd": 32.37,
+    "band_upper_usd": 41.61
+  },
+  {
+    "lane": "Karachi → Faisalabad",
+    "tonnage_tier": "20T+",
+    "vehicle_type": "Mazda 17ft",
+    "carrier_cost_floor_usd": 52.02,
+    "band_lower_usd": 54.62,
+    "band_upper_usd": 70.22
+  }
+]

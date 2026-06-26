@@ -1,0 +1,134 @@
+[
+  {
+    "shipper_id": "shipper-01",
+    "name": "Shipper 01",
+    "archetype": "volume-strategic-pricing-thin",
+    "volume_share_pct": 22,
+    "strategic": true,
+    "take_rate_pct": 3.8,
+    "ar_days": 40,
+    "overdue_ratio": 10,
+    "credit_terms_days": 45
+  },
+  {
+    "shipper_id": "shipper-02",
+    "name": "Shipper 02",
+    "archetype": "collection-risk-viable-pricing",
+    "volume_share_pct": 7,
+    "strategic": false,
+    "take_rate_pct": 7.5,
+    "ar_days": 82,
+    "overdue_ratio": 58,
+    "credit_terms_days": 30
+  },
+  {
+    "shipper_id": "shipper-03",
+    "name": "Shipper 03",
+    "archetype": "dual-risk-pricing-collection",
+    "volume_share_pct": 8,
+    "strategic": false,
+    "take_rate_pct": 2.1,
+    "ar_days": 78,
+    "overdue_ratio": 55,
+    "credit_terms_days": 60
+  },
+  {
+    "shipper_id": "shipper-04",
+    "name": "Shipper 04",
+    "archetype": "lane-specific-loss",
+    "volume_share_pct": 5,
+    "strategic": false,
+    "take_rate_pct": 6.8,
+    "ar_days": 30,
+    "overdue_ratio": 5,
+    "credit_terms_days": 30
+  },
+  {
+    "shipper_id": "shipper-05",
+    "name": "Shipper 05",
+    "archetype": "healthy",
+    "volume_share_pct": 7,
+    "strategic": false,
+    "take_rate_pct": 9.2,
+    "ar_days": 28,
+    "overdue_ratio": 4,
+    "credit_terms_days": 30
+  },
+  {
+    "shipper_id": "shipper-06",
+    "name": "Shipper 06",
+    "archetype": "healthy",
+    "volume_share_pct": 6,
+    "strategic": false,
+    "take_rate_pct": 11.5,
+    "ar_days": 22,
+    "overdue_ratio": 3,
+    "credit_terms_days": 15
+  },
+  {
+    "shipper_id": "shipper-07",
+    "name": "Shipper 07",
+    "archetype": "healthy",
+    "volume_share_pct": 5,
+    "strategic": false,
+    "take_rate_pct": 8,
+    "ar_days": 45,
+    "overdue_ratio": 8,
+    "credit_terms_days": 45
+  },
+  {
+    "shipper_id": "shipper-08",
+    "name": "Shipper 08",
+    "archetype": "healthy",
+    "volume_share_pct": 4,
+    "strategic": false,
+    "take_rate_pct": 10.3,
+    "ar_days": 35,
+    "overdue_ratio": 6,
+    "credit_terms_days": 30
+  },
+  {
+    "shipper_id": "shipper-09",
+    "name": "Shipper 09",
+    "archetype": "healthy",
+    "volume_share_pct": 4,
+    "strategic": false,
+    "take_rate_pct": 7.8,
+    "ar_days": 50,
+    "overdue_ratio": 14,
+    "credit_terms_days": 45
+  },
+  {
+    "shipper_id": "shipper-10",
+    "name": "Shipper 10",
+    "archetype": "healthy",
+    "volume_share_pct": 3,
+    "strategic": false,
+    "take_rate_pct": 12.1,
+    "ar_days": 18,
+    "overdue_ratio": 2,
+    "credit_terms_days": 15
+  },
+  {
+    "shipper_id": "shipper-11",
+    "name": "Shipper 11",
+    "archetype": "healthy",
+    "volume_share_pct": 3,
+    "strategic": false,
+    "take_rate_pct": 6.5,
+    "ar_days": 42,
+    "overdue_ratio": 11,
+    "credit_terms_days": 30
+  },
+  {
+    "shipper_id": "shipper-12",
+    "name": "Shipper 12",
+    "archetype": "unscored-incomplete-data",
+    "volume_share_pct": 4,
+    "strategic": false,
+    "take_rate_pct": null,
+    "ar_days": null,
+    "overdue_ratio": null,
+    "credit_terms_days": null
+  }
+]

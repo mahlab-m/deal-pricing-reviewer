@@ -1,0 +1,758 @@
+[
+  {
+    "shipper_id": "shipper-01",
+    "month": "2025-10",
+    "margin_pct": 4.4,
+    "take_rate_pct": 4.28,
+    "overdue_ratio": 8.07
+  },
+  {
+    "shipper_id": "shipper-01",
+    "month": "2025-11",
+    "margin_pct": 4.49,
+    "take_rate_pct": 4.18,
+    "overdue_ratio": 9.82
+  },
+  {
+    "shipper_id": "shipper-01",
+    "month": "2025-12",
+    "margin_pct": 4.33,
+    "take_rate_pct": 4.07,
+    "overdue_ratio": 8.3
+  },
+  {
+    "shipper_id": "shipper-01",
+    "month": "2026-01",
+    "margin_pct": 4.47,
+    "take_rate_pct": 4.05,
+    "overdue_ratio": 9.71
+  },
+  {
+    "shipper_id": "shipper-01",
+    "month": "2026-02",
+    "margin_pct": 4.45,
+    "take_rate_pct": 4.04,
+    "overdue_ratio": 9.52
+  },
+  {
+    "shipper_id": "shipper-01",
+    "month": "2026-03",
+    "margin_pct": 4.19,
+    "take_rate_pct": 4.15,
+    "overdue_ratio": 9
+  },
+  {
+    "shipper_id": "shipper-01",
+    "month": "2026-04",
+    "margin_pct": 4.25,
+    "take_rate_pct": 4.07,
+    "overdue_ratio": 9.94
+  },
+  {
+    "shipper_id": "shipper-01",
+    "month": "2026-05",
+    "margin_pct": 4.18,
+    "take_rate_pct": 3.84,
+    "overdue_ratio": 9.49
+  },
+  {
+    "shipper_id": "shipper-01",
+    "month": "2026-06",
+    "margin_pct": 4.14,
+    "take_rate_pct": 3.74,
+    "overdue_ratio": 9.39
+  },
+  {
+    "shipper_id": "shipper-02",
+    "month": "2025-10",
+    "margin_pct": 8.05,
+    "take_rate_pct": 7.36,
+    "overdue_ratio": 33.23
+  },
+  {
+    "shipper_id": "shipper-02",
+    "month": "2025-11",
+    "margin_pct": 8.33,
+    "take_rate_pct": 7.36,
+    "overdue_ratio": 39.25
+  },
+  {
+    "shipper_id": "shipper-02",
+    "month": "2025-12",
+    "margin_pct": 7.96,
+    "take_rate_pct": 7.48,
+    "overdue_ratio": 41.17
+  },
+  {
+    "shipper_id": "shipper-02",
+    "month": "2026-01",
+    "margin_pct": 8.33,
+    "take_rate_pct": 7.57,
+    "overdue_ratio": 43.78
+  },
+  {
+    "shipper_id": "shipper-02",
+    "month": "2026-02",
+    "margin_pct": 8.46,
+    "take_rate_pct": 7.57,
+    "overdue_ratio": 47.26
+  },
+  {
+    "shipper_id": "shipper-02",
+    "month": "2026-03",
+    "margin_pct": 8.41,
+    "take_rate_pct": 7.41,
+    "overdue_ratio": 48.62
+  },
+  {
+    "shipper_id": "shipper-02",
+    "month": "2026-04",
+    "margin_pct": 8.45,
+    "take_rate_pct": 7.64,
+    "overdue_ratio": 52.14
+  },
+  {
+    "shipper_id": "shipper-02",
+    "month": "2026-05",
+    "margin_pct": 8.37,
+    "take_rate_pct": 7.46,
+    "overdue_ratio": 54.58
+  },
+  {
+    "shipper_id": "shipper-02",
+    "month": "2026-06",
+    "margin_pct": 8.36,
+    "take_rate_pct": 7.41,
+    "overdue_ratio": 56.06
+  },
+  {
+    "shipper_id": "shipper-03",
+    "month": "2025-10",
+    "margin_pct": 2.32,
+    "take_rate_pct": 3.14,
+    "overdue_ratio": 39.17
+  },
+  {
+    "shipper_id": "shipper-03",
+    "month": "2025-11",
+    "margin_pct": 2.22,
+    "take_rate_pct": 2.78,
+    "overdue_ratio": 40.96
+  },
+  {
+    "shipper_id": "shipper-03",
+    "month": "2025-12",
+    "margin_pct": 2.09,
+    "take_rate_pct": 2.79,
+    "overdue_ratio": 44.64
+  },
+  {
+    "shipper_id": "shipper-03",
+    "month": "2026-01",
+    "margin_pct": 2.43,
+    "take_rate_pct": 2.6,
+    "overdue_ratio": 45.55
+  },
+  {
+    "shipper_id": "shipper-03",
+    "month": "2026-02",
+    "margin_pct": 2.14,
+    "take_rate_pct": 2.66,
+    "overdue_ratio": 50.46
+  },
+  {
+    "shipper_id": "shipper-03",
+    "month": "2026-03",
+    "margin_pct": 2.2,
+    "take_rate_pct": 2.42,
+    "overdue_ratio": 49.73
+  },
+  {
+    "shipper_id": "shipper-03",
+    "month": "2026-04",
+    "margin_pct": 1.99,
+    "take_rate_pct": 2.39,
+    "overdue_ratio": 51.54
+  },
+  {
+    "shipper_id": "shipper-03",
+    "month": "2026-05",
+    "margin_pct": 1.71,
+    "take_rate_pct": 2.25,
+    "overdue_ratio": 56.63
+  },
+  {
+    "shipper_id": "shipper-03",
+    "month": "2026-06",
+    "margin_pct": 1.94,
+    "take_rate_pct": 2.25,
+    "overdue_ratio": 57.04
+  },
+  {
+    "shipper_id": "shipper-04",
+    "month": "2025-10",
+    "margin_pct": 5.31,
+    "take_rate_pct": 6.68,
+    "overdue_ratio": 4.7
+  },
+  {
+    "shipper_id": "shipper-04",
+    "month": "2025-11",
+    "margin_pct": 5.42,
+    "take_rate_pct": 6.88,
+    "overdue_ratio": 4.75
+  },
+  {
+    "shipper_id": "shipper-04",
+    "month": "2025-12",
+    "margin_pct": 5.37,
+    "take_rate_pct": 6.87,
+    "overdue_ratio": 4.4
+  },
+  {
+    "shipper_id": "shipper-04",
+    "month": "2026-01",
+    "margin_pct": 5.21,
+    "take_rate_pct": 6.68,
+    "overdue_ratio": 4.41
+  },
+  {
+    "shipper_id": "shipper-04",
+    "month": "2026-02",
+    "margin_pct": 5.07,
+    "take_rate_pct": 6.7,
+    "overdue_ratio": 4.48
+  },
+  {
+    "shipper_id": "shipper-04",
+    "month": "2026-03",
+    "margin_pct": 5.44,
+    "take_rate_pct": 6.84,
+    "overdue_ratio": 5.11
+  },
+  {
+    "shipper_id": "shipper-04",
+    "month": "2026-04",
+    "margin_pct": 5.29,
+    "take_rate_pct": 6.72,
+    "overdue_ratio": 5.37
+  },
+  {
+    "shipper_id": "shipper-04",
+    "month": "2026-05",
+    "margin_pct": 5.01,
+    "take_rate_pct": 6.78,
+    "overdue_ratio": 5.25
+  },
+  {
+    "shipper_id": "shipper-04",
+    "month": "2026-06",
+    "margin_pct": 5.27,
+    "take_rate_pct": 6.85,
+    "overdue_ratio": 5.58
+  },
+  {
+    "shipper_id": "shipper-05",
+    "month": "2025-10",
+    "margin_pct": 9.44,
+    "take_rate_pct": 9.44,
+    "overdue_ratio": 4.33
+  },
+  {
+    "shipper_id": "shipper-05",
+    "month": "2025-11",
+    "margin_pct": 9.48,
+    "take_rate_pct": 8.99,
+    "overdue_ratio": 4.6
+  },
+  {
+    "shipper_id": "shipper-05",
+    "month": "2025-12",
+    "margin_pct": 9.2,
+    "take_rate_pct": 8.87,
+    "overdue_ratio": 3.71
+  },
+  {
+    "shipper_id": "shipper-05",
+    "month": "2026-01",
+    "margin_pct": 8.54,
+    "take_rate_pct": 9.33,
+    "overdue_ratio": 4.66
+  },
+  {
+    "shipper_id": "shipper-05",
+    "month": "2026-02",
+    "margin_pct": 8.51,
+    "take_rate_pct": 9.04,
+    "overdue_ratio": 3.42
+  },
+  {
+    "shipper_id": "shipper-05",
+    "month": "2026-03",
+    "margin_pct": 9.01,
+    "take_rate_pct": 9.35,
+    "overdue_ratio": 3.48
+  },
+  {
+    "shipper_id": "shipper-05",
+    "month": "2026-04",
+    "margin_pct": 9.19,
+    "take_rate_pct": 9.17,
+    "overdue_ratio": 3.43
+  },
+  {
+    "shipper_id": "shipper-05",
+    "month": "2026-05",
+    "margin_pct": 8.59,
+    "take_rate_pct": 9.46,
+    "overdue_ratio": 4.99
+  },
+  {
+    "shipper_id": "shipper-05",
+    "month": "2026-06",
+    "margin_pct": 8.74,
+    "take_rate_pct": 8.81,
+    "overdue_ratio": 4.04
+  },
+  {
+    "shipper_id": "shipper-06",
+    "month": "2025-10",
+    "margin_pct": 8.88,
+    "take_rate_pct": 11.84,
+    "overdue_ratio": 3.15
+  },
+  {
+    "shipper_id": "shipper-06",
+    "month": "2025-11",
+    "margin_pct": 9.19,
+    "take_rate_pct": 11.16,
+    "overdue_ratio": 3.11
+  },
+  {
+    "shipper_id": "shipper-06",
+    "month": "2025-12",
+    "margin_pct": 8.84,
+    "take_rate_pct": 11.72,
+    "overdue_ratio": 3.69
+  },
+  {
+    "shipper_id": "shipper-06",
+    "month": "2026-01",
+    "margin_pct": 9.35,
+    "take_rate_pct": 11.48,
+    "overdue_ratio": 3.16
+  },
+  {
+    "shipper_id": "shipper-06",
+    "month": "2026-02",
+    "margin_pct": 8.68,
+    "take_rate_pct": 11.16,
+    "overdue_ratio": 2.02
+  },
+  {
+    "shipper_id": "shipper-06",
+    "month": "2026-03",
+    "margin_pct": 9.05,
+    "take_rate_pct": 11.88,
+    "overdue_ratio": 3.05
+  },
+  {
+    "shipper_id": "shipper-06",
+    "month": "2026-04",
+    "margin_pct": 8.68,
+    "take_rate_pct": 11.38,
+    "overdue_ratio": 3.4
+  },
+  {
+    "shipper_id": "shipper-06",
+    "month": "2026-05",
+    "margin_pct": 9.02,
+    "take_rate_pct": 11.7,
+    "overdue_ratio": 3.14
+  },
+  {
+    "shipper_id": "shipper-06",
+    "month": "2026-06",
+    "margin_pct": 9.26,
+    "take_rate_pct": 11.8,
+    "overdue_ratio": 3.33
+  },
+  {
+    "shipper_id": "shipper-07",
+    "month": "2025-10",
+    "margin_pct": 8.78,
+    "take_rate_pct": 8.01,
+    "overdue_ratio": 8.65
+  },
+  {
+    "shipper_id": "shipper-07",
+    "month": "2025-11",
+    "margin_pct": 8.84,
+    "take_rate_pct": 8.1,
+    "overdue_ratio": 7.25
+  },
+  {
+    "shipper_id": "shipper-07",
+    "month": "2025-12",
+    "margin_pct": 8.69,
+    "take_rate_pct": 7.71,
+    "overdue_ratio": 7.23
+  },
+  {
+    "shipper_id": "shipper-07",
+    "month": "2026-01",
+    "margin_pct": 8.8,
+    "take_rate_pct": 8.14,
+    "overdue_ratio": 7.11
+  },
+  {
+    "shipper_id": "shipper-07",
+    "month": "2026-02",
+    "margin_pct": 9.5,
+    "take_rate_pct": 7.97,
+    "overdue_ratio": 7.4
+  },
+  {
+    "shipper_id": "shipper-07",
+    "month": "2026-03",
+    "margin_pct": 8.63,
+    "take_rate_pct": 7.99,
+    "overdue_ratio": 8.74
+  },
+  {
+    "shipper_id": "shipper-07",
+    "month": "2026-04",
+    "margin_pct": 8.59,
+    "take_rate_pct": 8.14,
+    "overdue_ratio": 8.5
+  },
+  {
+    "shipper_id": "shipper-07",
+    "month": "2026-05",
+    "margin_pct": 8.67,
+    "take_rate_pct": 8.2,
+    "overdue_ratio": 7.87
+  },
+  {
+    "shipper_id": "shipper-07",
+    "month": "2026-06",
+    "margin_pct": 9.28,
+    "take_rate_pct": 7.76,
+    "overdue_ratio": 7.73
+  },
+  {
+    "shipper_id": "shipper-08",
+    "month": "2025-10",
+    "margin_pct": 9.33,
+    "take_rate_pct": 10.25,
+    "overdue_ratio": 6.39
+  },
+  {
+    "shipper_id": "shipper-08",
+    "month": "2025-11",
+    "margin_pct": 9.29,
+    "take_rate_pct": 10.28,
+    "overdue_ratio": 5.64
+  },
+  {
+    "shipper_id": "shipper-08",
+    "month": "2025-12",
+    "margin_pct": 8.75,
+    "take_rate_pct": 10.14,
+    "overdue_ratio": 6.08
+  },
+  {
+    "shipper_id": "shipper-08",
+    "month": "2026-01",
+    "margin_pct": 8.91,
+    "take_rate_pct": 10.27,
+    "overdue_ratio": 5.32
+  },
+  {
+    "shipper_id": "shipper-08",
+    "month": "2026-02",
+    "margin_pct": 9.38,
+    "take_rate_pct": 10.61,
+    "overdue_ratio": 5.67
+  },
+  {
+    "shipper_id": "shipper-08",
+    "month": "2026-03",
+    "margin_pct": 9.48,
+    "take_rate_pct": 10.15,
+    "overdue_ratio": 6.69
+  },
+  {
+    "shipper_id": "shipper-08",
+    "month": "2026-04",
+    "margin_pct": 8.93,
+    "take_rate_pct": 9.96,
+    "overdue_ratio": 6.87
+  },
+  {
+    "shipper_id": "shipper-08",
+    "month": "2026-05",
+    "margin_pct": 8.74,
+    "take_rate_pct": 10.69,
+    "overdue_ratio": 6.38
+  },
+  {
+    "shipper_id": "shipper-08",
+    "month": "2026-06",
+    "margin_pct": 9.41,
+    "take_rate_pct": 10.06,
+    "overdue_ratio": 5.78
+  },
+  {
+    "shipper_id": "shipper-09",
+    "month": "2025-10",
+    "margin_pct": 8.96,
+    "take_rate_pct": 8.18,
+    "overdue_ratio": 13.55
+  },
+  {
+    "shipper_id": "shipper-09",
+    "month": "2025-11",
+    "margin_pct": 9.38,
+    "take_rate_pct": 7.83,
+    "overdue_ratio": 13.53
+  },
+  {
+    "shipper_id": "shipper-09",
+    "month": "2025-12",
+    "margin_pct": 8.52,
+    "take_rate_pct": 7.56,
+    "overdue_ratio": 14
+  },
+  {
+    "shipper_id": "shipper-09",
+    "month": "2026-01",
+    "margin_pct": 8.75,
+    "take_rate_pct": 7.72,
+    "overdue_ratio": 13.05
+  },
+  {
+    "shipper_id": "shipper-09",
+    "month": "2026-02",
+    "margin_pct": 8.87,
+    "take_rate_pct": 7.71,
+    "overdue_ratio": 14.86
+  },
+  {
+    "shipper_id": "shipper-09",
+    "month": "2026-03",
+    "margin_pct": 8.67,
+    "take_rate_pct": 8.14,
+    "overdue_ratio": 13.22
+  },
+  {
+    "shipper_id": "shipper-09",
+    "month": "2026-04",
+    "margin_pct": 9,
+    "take_rate_pct": 7.69,
+    "overdue_ratio": 14.57
+  },
+  {
+    "shipper_id": "shipper-09",
+    "month": "2026-05",
+    "margin_pct": 8.52,
+    "take_rate_pct": 7.67,
+    "overdue_ratio": 13.19
+  },
+  {
+    "shipper_id": "shipper-09",
+    "month": "2026-06",
+    "margin_pct": 9.01,
+    "take_rate_pct": 8.16,
+    "overdue_ratio": 13.32
+  },
+  {
+    "shipper_id": "shipper-10",
+    "month": "2025-10",
+    "margin_pct": 9.28,
+    "take_rate_pct": 12.21,
+    "overdue_ratio": 1.32
+  },
+  {
+    "shipper_id": "shipper-10",
+    "month": "2025-11",
+    "margin_pct": 9.34,
+    "take_rate_pct": 12.3,
+    "overdue_ratio": 1.72
+  },
+  {
+    "shipper_id": "shipper-10",
+    "month": "2025-12",
+    "margin_pct": 8.88,
+    "take_rate_pct": 11.75,
+    "overdue_ratio": 2.38
+  },
+  {
+    "shipper_id": "shipper-10",
+    "month": "2026-01",
+    "margin_pct": 9,
+    "take_rate_pct": 11.76,
+    "overdue_ratio": 1.86
+  },
+  {
+    "shipper_id": "shipper-10",
+    "month": "2026-02",
+    "margin_pct": 8.55,
+    "take_rate_pct": 11.76,
+    "overdue_ratio": 1.82
+  },
+  {
+    "shipper_id": "shipper-10",
+    "month": "2026-03",
+    "margin_pct": 8.59,
+    "take_rate_pct": 12.47,
+    "overdue_ratio": 1.63
+  },
+  {
+    "shipper_id": "shipper-10",
+    "month": "2026-04",
+    "margin_pct": 9.12,
+    "take_rate_pct": 12.03,
+    "overdue_ratio": 2.51
+  },
+  {
+    "shipper_id": "shipper-10",
+    "month": "2026-05",
+    "margin_pct": 8.53,
+    "take_rate_pct": 12.02,
+    "overdue_ratio": 2.4
+  },
+  {
+    "shipper_id": "shipper-10",
+    "month": "2026-06",
+    "margin_pct": 9.44,
+    "take_rate_pct": 12.22,
+    "overdue_ratio": 1.48
+  },
+  {
+    "shipper_id": "shipper-11",
+    "month": "2025-10",
+    "margin_pct": 9.21,
+    "take_rate_pct": 6.18,
+    "overdue_ratio": 10.83
+  },
+  {
+    "shipper_id": "shipper-11",
+    "month": "2025-11",
+    "margin_pct": 8.6,
+    "take_rate_pct": 6.8,
+    "overdue_ratio": 11.91
+  },
+  {
+    "shipper_id": "shipper-11",
+    "month": "2025-12",
+    "margin_pct": 8.65,
+    "take_rate_pct": 6.31,
+    "overdue_ratio": 11.39
+  },
+  {
+    "shipper_id": "shipper-11",
+    "month": "2026-01",
+    "margin_pct": 9.27,
+    "take_rate_pct": 6.7,
+    "overdue_ratio": 11.75
+  },
+  {
+    "shipper_id": "shipper-11",
+    "month": "2026-02",
+    "margin_pct": 8.92,
+    "take_rate_pct": 6.6,
+    "overdue_ratio": 11.96
+  },
+  {
+    "shipper_id": "shipper-11",
+    "month": "2026-03",
+    "margin_pct": 8.94,
+    "take_rate_pct": 6.36,
+    "overdue_ratio": 10.14
+  },
+  {
+    "shipper_id": "shipper-11",
+    "month": "2026-04",
+    "margin_pct": 9.07,
+    "take_rate_pct": 6.18,
+    "overdue_ratio": 11.59
+  },
+  {
+    "shipper_id": "shipper-11",
+    "month": "2026-05",
+    "margin_pct": 9.29,
+    "take_rate_pct": 6.22,
+    "overdue_ratio": 10.36
+  },
+  {
+    "shipper_id": "shipper-11",
+    "month": "2026-06",
+    "margin_pct": 9.08,
+    "take_rate_pct": 6.65,
+    "overdue_ratio": 11.88
+  },
+  {
+    "shipper_id": "shipper-12",
+    "month": "2025-10",
+    "margin_pct": 7.37,
+    "take_rate_pct": 6.3,
+    "overdue_ratio": 7.39
+  },
+  {
+    "shipper_id": "shipper-12",
+    "month": "2025-11",
+    "margin_pct": 7.44,
+    "take_rate_pct": 6.18,
+    "overdue_ratio": 8.43
+  },
+  {
+    "shipper_id": "shipper-12",
+    "month": "2025-12",
+    "margin_pct": 7.19,
+    "take_rate_pct": 5.9,
+    "overdue_ratio": 8.4
+  },
+  {
+    "shipper_id": "shipper-12",
+    "month": "2026-01",
+    "margin_pct": 7.15,
+    "take_rate_pct": 6.45,
+    "overdue_ratio": 7.82
+  },
+  {
+    "shipper_id": "shipper-12",
+    "month": "2026-02",
+    "margin_pct": 7.21,
+    "take_rate_pct": 6.36,
+    "overdue_ratio": 7.74
+  },
+  {
+    "shipper_id": "shipper-12",
+    "month": "2026-03",
+    "margin_pct": 7.15,
+    "take_rate_pct": 6.11,
+    "overdue_ratio": 8.77
+  },
+  {
+    "shipper_id": "shipper-12",
+    "month": "2026-04",
+    "margin_pct": 7.59,
+    "take_rate_pct": 5.98,
+    "overdue_ratio": 8.6
+  },
+  {
+    "shipper_id": "shipper-12",
+    "month": "2026-05",
+    "margin_pct": 7.28,
+    "take_rate_pct": 6.46,
+    "overdue_ratio": 7.41
+  },
+  {
+    "shipper_id": "shipper-12",
+    "month": "2026-06",
+    "margin_pct": 7.24,
+    "take_rate_pct": 6.19,
+    "overdue_ratio": 8.08
+  }
+]
