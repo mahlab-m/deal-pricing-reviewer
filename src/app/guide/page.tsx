@@ -363,8 +363,8 @@ function CheckTable({
           <tr className="border-b border-gray-200 bg-gray-800">
             <th className="text-left px-3 py-2 text-white font-medium uppercase tracking-wide w-32">Rule</th>
             <th className="text-left px-3 py-2 text-white font-medium uppercase tracking-wide">What it checks</th>
-            <th className="text-left px-3 py-2 text-emerald-300 font-medium uppercase tracking-wide">Pass</th>
-            <th className="text-left px-3 py-2 text-red-300 font-medium uppercase tracking-wide">Fail</th>
+            <th className="text-left px-3 py-2 text-white font-medium uppercase tracking-wide">Pass</th>
+            <th className="text-left px-3 py-2 text-white font-medium uppercase tracking-wide">Fail</th>
           </tr>
         </thead>
         <tbody className="divide-y divide-gray-100">
