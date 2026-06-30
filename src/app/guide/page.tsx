@@ -5,7 +5,7 @@ export default function GuidePage() {
     <div className="min-h-screen bg-gray-50">
       <NavBar />
       <main className="max-w-3xl mx-auto px-6 py-10">
-        <h1 className="text-xl font-semibold text-gray-900 mb-1">How This Tool Works</h1>
+        <h1 className="text-xl font-semibold text-gray-900 mb-1">How It Works</h1>
         <p className="text-sm text-gray-500 mb-10">
           A walkthrough of the governance logic, data model, and AI layer.
         </p>
@@ -273,35 +273,6 @@ export default function GuidePage() {
             For the demo MVP, stop at module 2 — the HTTP call returning the JSON is enough to
             show the pattern. Add the Router and Gmail modules when you want to send real emails.
           </p>
-        </Section>
-
-        <Section title="Running the AI agent">
-          <ol className="space-y-3 text-xs text-gray-600 list-decimal list-inside">
-            <li>
-              Set <code className="font-mono bg-gray-100 px-1 rounded text-gray-700">ANTHROPIC_API_KEY</code>{" "}
-              in <code className="font-mono bg-gray-100 px-1 rounded text-gray-700">.env.local</code> to a real key.
-            </li>
-            <li>
-              Call <code className="font-mono bg-gray-100 px-1 rounded text-gray-700">POST /api/review</code> — no body needed.
-              The endpoint loads all data, runs the deterministic checks, and sends only the flagged
-              deals to the agent.
-            </li>
-            <li>
-              The agent uses one tool — <code className="font-mono bg-gray-100 px-1 rounded text-gray-700">lookup_rate_card_cell</code> — to
-              fetch the rate card for a specific lane/tier/vehicle combination. It runs up to 3
-              turns before producing a final verdict.
-            </li>
-            <li>
-              Verdict options: <span className="text-emerald-700">approve_exception</span> (price
-              defensible given context), <span className="text-red-600">reject</span> (reprice
-              required), or <span className="text-amber-600">escalate</span> (ambiguous — send to
-              human).
-            </li>
-            <li>
-              Results are returned as JSON. The action queue updates with AI rationale and
-              confidence scores per deal.
-            </li>
-          </ol>
         </Section>
       </main>
     </div>
