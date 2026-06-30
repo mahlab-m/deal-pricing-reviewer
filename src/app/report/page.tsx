@@ -83,9 +83,9 @@ export default function ReportPage() {
           <div className="rounded-lg border border-gray-200 overflow-x-auto bg-white">
             <table className="w-full min-w-[600px] text-xs">
               <thead>
-                <tr className="border-b border-gray-200 bg-gray-50">
+                <tr className="border-b border-gray-200 bg-gray-800">
                   {["Shipper", "Health", "Trend", "Margin Δ", "Take Rate Δ", "Overdue Δ"].map((h) => (
-                    <th key={h} className="text-left px-4 py-2.5 text-gray-400 font-medium uppercase tracking-wide">{h}</th>
+                    <th key={h} className="text-left px-4 py-2.5 text-white font-medium uppercase tracking-wide">{h}</th>
                   ))}
                 </tr>
               </thead>
