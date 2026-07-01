@@ -269,10 +269,6 @@ export default function GuidePage() {
               </div>
             ))}
           </div>
-          <p className="text-xs text-gray-500">
-            For the demo MVP, stop at module 2 — the HTTP call returning the JSON is enough to
-            show the pattern. Add the Router and Gmail modules when you want to send real emails.
-          </p>
         </Section>
       </main>
     </div>

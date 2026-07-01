@@ -157,7 +157,7 @@ export function deriveActionQueue(
         owner: "Vertical Lead",
         priority: "P1",
         status: "not started",
-        rationale: `${result.shipper_id} is missing account data — cannot assess pricing or collection health. Finance needs to fill in take rate, receivables days, and overdue ratio before this account can be reviewed.`,
+        rationale: `Missing account data — cannot assess pricing or collection health. Finance needs to fill in take rate, receivables days, and overdue ratio before this account can be reviewed.`,
         created_at: now,
       });
       continue;

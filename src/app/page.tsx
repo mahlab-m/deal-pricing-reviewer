@@ -87,7 +87,7 @@ export default function PortfolioPage() {
                       )}
                     </div>
                     <div className="text-xs text-gray-400 mt-0.5">
-                      {shipper.shipper_id} · {shipper.volume_share_pct}% vol share
+                      {shipper.volume_share_pct}% vol share
                     </div>
                   </td>
                   <td className="px-4 py-3 text-xs text-gray-500">
