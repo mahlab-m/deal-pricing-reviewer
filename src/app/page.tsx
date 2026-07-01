@@ -64,14 +64,14 @@ export default function PortfolioPage() {
         <div className="rounded-lg border border-gray-200 overflow-x-auto bg-white">
           <table className="w-full min-w-[700px] text-sm">
             <thead>
-              <tr className="border-b border-gray-200 bg-gray-50">
-                <th className="text-left px-4 py-3 text-xs font-medium text-gray-400 uppercase tracking-wide">Shipper</th>
-                <th className="text-left px-4 py-3 text-xs font-medium text-gray-400 uppercase tracking-wide">Archetype</th>
-                <th className="text-center px-4 py-3 text-xs font-medium text-gray-400 uppercase tracking-wide" title="Pricing Health — based on deal take rate and band compliance">Pricing</th>
-                <th className="text-center px-4 py-3 text-xs font-medium text-gray-400 uppercase tracking-wide" title="Collection Health — based on AR days and overdue ratio">Collection</th>
-                <th className="text-center px-4 py-3 text-xs font-medium text-gray-400 uppercase tracking-wide" title="Capacity Health — based on deal volume and strategic flag">Capacity</th>
-                <th className="text-center px-4 py-3 text-xs font-medium text-gray-400 uppercase tracking-wide">Deals</th>
-                <th className="px-4 py-3" />
+              <tr className="border-b border-gray-200 bg-gray-800">
+                <th className="text-left px-4 py-3 text-xs font-medium text-white uppercase tracking-wide">Shipper</th>
+                <th className="text-left px-4 py-3 text-xs font-medium text-white uppercase tracking-wide">Archetype</th>
+                <th className="text-center px-4 py-3 text-xs font-medium text-white uppercase tracking-wide" title="Pricing Health — based on deal take rate and band compliance">Pricing</th>
+                <th className="text-center px-4 py-3 text-xs font-medium text-white uppercase tracking-wide" title="Collection Health — based on AR days and overdue ratio">Collection</th>
+                <th className="text-center px-4 py-3 text-xs font-medium text-white uppercase tracking-wide" title="Capacity Health — based on deal volume and strategic flag">Capacity</th>
+                <th className="text-center px-4 py-3 text-xs font-medium text-white uppercase tracking-wide">Deals</th>
+                <th className="px-4 py-3 bg-gray-800" />
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100">
@@ -136,11 +136,12 @@ function StatCard({ label, value, sub, color }: {
   label: string; value: string; sub: string; color: "emerald" | "red" | "amber";
 }) {
   const valueColor = { emerald: "text-emerald-600", red: "text-red-600", amber: "text-amber-600" }[color];
+  const bgColor = { emerald: "bg-emerald-50 border-emerald-100", red: "bg-red-50 border-red-100", amber: "bg-amber-50 border-amber-100" }[color];
   return (
-    <div className="bg-white rounded-lg border border-gray-200 px-4 py-4">
-      <div className="text-xs text-gray-400 font-medium uppercase tracking-wide">{label}</div>
+    <div className={`rounded-lg border px-4 py-4 shadow-sm ${bgColor}`}>
+      <div className="text-xs text-gray-500 font-medium uppercase tracking-wide">{label}</div>
       <div className={`text-2xl font-bold mt-1 ${valueColor}`}>{value}</div>
-      <div className="text-xs text-gray-400 mt-0.5">{sub}</div>
+      <div className="text-xs text-gray-500 mt-0.5">{sub}</div>
     </div>
   );
 }

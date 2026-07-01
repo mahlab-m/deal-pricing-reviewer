@@ -117,9 +117,9 @@ export default async function ShipperPage({ params }: { params: Promise<{ id: st
           <div className="rounded-lg border border-gray-200 overflow-x-auto bg-white">
             <table className="w-full min-w-[680px] text-sm">
               <thead>
-                <tr className="border-b border-gray-200 bg-gray-50">
+                <tr className="border-b border-gray-200 bg-gray-800">
                   {["Deal", "Lane", "Tonnage", "Vehicle", "Price", "Cost", "Margin", "Status"].map((h) => (
-                    <th key={h} className="text-left px-3 py-2.5 text-xs font-medium text-gray-400 uppercase tracking-wide">
+                    <th key={h} className="text-left px-3 py-2.5 text-xs font-medium text-white uppercase tracking-wide">
                       {h}
                     </th>
                   ))}
@@ -179,9 +179,10 @@ function MetricCard({ label, value, floor, status }: {
   label: string; value: string; floor: string; status: import("@/lib/dashboard").HealthStatus;
 }) {
   const valueColor = { green: "text-emerald-600", yellow: "text-amber-600", red: "text-red-600", unscored: "text-gray-400" }[status];
+  const bgColor = { green: "bg-emerald-50 border-emerald-100", yellow: "bg-amber-50 border-amber-100", red: "bg-red-50 border-red-100", unscored: "bg-gray-50 border-gray-200" }[status];
   return (
-    <div className="bg-white rounded-lg border border-gray-200 px-4 py-4">
-      <div className="text-xs text-gray-400 font-medium uppercase tracking-wide">{label}</div>
+    <div className={`rounded-lg border px-4 py-4 shadow-sm ${bgColor}`}>
+      <div className="text-xs text-gray-500 font-medium uppercase tracking-wide">{label}</div>
       <div className={`text-3xl font-bold mt-1 ${valueColor}`}>{value}</div>
       <div className="text-xs text-gray-500 mt-1">{floor}</div>
       <div className="mt-2"><TrafficLight status={status} /></div>

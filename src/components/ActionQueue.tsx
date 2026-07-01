@@ -103,12 +103,12 @@ export default function ActionQueue({ initialEntries }: Props) {
       <div className="rounded-lg border border-gray-200 overflow-x-auto bg-white">
         <table className="w-full min-w-[640px] text-sm">
           <thead>
-            <tr className="border-b border-gray-200 bg-gray-50">
-              <th className="text-left px-4 py-3 text-xs font-medium text-gray-400 uppercase tracking-wide w-24">Priority</th>
-              <th className="text-left px-4 py-3 text-xs font-medium text-gray-400 uppercase tracking-wide">Shipper</th>
-              <th className="text-left px-4 py-3 text-xs font-medium text-gray-400 uppercase tracking-wide">Recommended Action</th>
-              <th className="text-left px-4 py-3 text-xs font-medium text-gray-400 uppercase tracking-wide">Owner</th>
-              <th className="text-left px-4 py-3 text-xs font-medium text-gray-400 uppercase tracking-wide w-32">Status</th>
+            <tr className="border-b border-gray-200 bg-gray-800">
+              <th className="text-left px-4 py-3 text-xs font-medium text-white uppercase tracking-wide w-24">Priority</th>
+              <th className="text-left px-4 py-3 text-xs font-medium text-white uppercase tracking-wide">Shipper</th>
+              <th className="text-left px-4 py-3 text-xs font-medium text-white uppercase tracking-wide">Recommended Action</th>
+              <th className="text-left px-4 py-3 text-xs font-medium text-white uppercase tracking-wide">Owner</th>
+              <th className="text-left px-4 py-3 text-xs font-medium text-white uppercase tracking-wide w-32">Status</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-100">

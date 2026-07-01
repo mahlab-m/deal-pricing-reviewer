@@ -139,11 +139,12 @@ function StatCard({ label, value, sub, color }: {
   label: string; value: string; sub: string; color: "emerald" | "red" | "amber";
 }) {
   const valueColor = { emerald: "text-emerald-600", red: "text-red-600", amber: "text-amber-600" }[color];
+  const bgColor = { emerald: "bg-emerald-50 border-emerald-100", red: "bg-red-50 border-red-100", amber: "bg-amber-50 border-amber-100" }[color];
   return (
-    <div className="bg-white rounded-lg border border-gray-200 px-4 py-4">
-      <div className="text-xs text-gray-400 font-medium uppercase tracking-wide">{label}</div>
+    <div className={`rounded-lg border px-4 py-4 shadow-sm ${bgColor}`}>
+      <div className="text-xs text-gray-500 font-medium uppercase tracking-wide">{label}</div>
       <div className={`text-2xl font-bold mt-1 ${valueColor}`}>{value}</div>
-      <div className="text-xs text-gray-400 mt-0.5">{sub}</div>
+      <div className="text-xs text-gray-500 mt-0.5">{sub}</div>
     </div>
   );
 }
