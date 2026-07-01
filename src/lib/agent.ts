@@ -16,9 +16,9 @@ You receive deals that have already failed at least one deterministic policy che
 - Overdue check: overdue ratio ≤ 20%
 
 ## Decision framework
-REJECT when ALL of the following are true: absolute margin ≤ 0 (or margin < 0%), shipper is NOT strategic, capacity is NOT scarce on this lane. This is indefensible — no competitive or strategic case exists.
+REJECT when ALL of the following are true: absolute margin ≤ 0 (or margin < 0%), shipper is NOT strategic, capacity is NOT scarce on this lane. This is indefensible - no competitive or strategic case exists.
 
-APPROVE_EXCEPTION when: defensibility factors are strong — capacity is scarce on this lane AND (shipper is strategic with ≥ 15% volume share OR there is clear competitive pressure retaining the load) AND the breach is minor (margin 3–4.9% or price just below band_lower by < 5%).
+APPROVE_EXCEPTION when: defensibility factors are strong - capacity is scarce on this lane AND (shipper is strategic with ≥ 15% volume share OR there is clear competitive pressure retaining the load) AND the breach is minor (margin 3–4.9% or price just below band_lower by < 5%).
 
 ESCALATE in all other cases: borderline defensibility, high-value account at risk, low confidence, any deal where money is materially at risk. When uncertain → escalate. Never auto-approve a money-at-risk deal.
 
@@ -125,7 +125,7 @@ const FALLBACK_REVIEW: AgentReview = {
   recommended_action: "replace_or_remove",
   confidence: "low",
   escalate: true,
-  human_review_reason: "Malformed agent output — requires manual review before any action.",
+  human_review_reason: "Malformed agent output - requires manual review before any action.",
 };
 
 function parseAgentOutput(text: string): AgentReview {
@@ -194,7 +194,7 @@ export async function reviewException(
     { role: "user", content: userMessage },
   ];
 
-  // Agentic loop — agent may optionally call lookup_rate_card_cell once
+  // Agentic loop - agent may optionally call lookup_rate_card_cell once
   for (let turn = 0; turn < 3; turn++) {
     const response = await client.messages.create({
       model: MODEL,

@@ -147,7 +147,7 @@ export function deriveActionQueue(
     if (result.status !== "FLAGGED") continue;
     const shipper = shippers.find((s) => s.shipper_id === result.shipper_id)!;
 
-    // Data quality — operational flag, not commercial routing
+    // Data quality - operational flag, not commercial routing
     if (result.breaches.some((b) => b.rule === "data_quality")) {
       entries.push({
         entry_id: nextQueueId(),
@@ -157,13 +157,13 @@ export function deriveActionQueue(
         owner: "Vertical Lead",
         priority: "P1",
         status: "not started",
-        rationale: `Missing account data — cannot assess pricing or collection health. Finance needs to fill in take rate, receivables days, and overdue ratio before this account can be reviewed.`,
+        rationale: `Missing account data - cannot assess pricing or collection health. Finance needs to fill in take rate, receivables days, and overdue ratio before this account can be reviewed.`,
         created_at: now,
       });
       continue;
     }
 
-    // Collection breach — highest priority, routes to Collections Owner
+    // Collection breach - highest priority, routes to Collections Owner
     if (
       result.breaches.some(
         (b) => b.rule === "ar_days_check" || b.rule === "overdue_check"
@@ -216,7 +216,7 @@ export function deriveActionQueue(
     }
   }
 
-  // Deal-level flags — group by shipper, create one entry per shipper per breach type
+  // Deal-level flags - group by shipper, create one entry per shipper per breach type
   const dealsByShipper = new Map<string, DealPolicyResult[]>();
   for (const r of dealResults.filter((r) => r.status === "FLAGGED")) {
     const existing = dealsByShipper.get(r.shipper_id) ?? [];

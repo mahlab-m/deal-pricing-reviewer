@@ -161,7 +161,7 @@ function computeHealthDeltas(
       trend,
       current: current
         ? { month: current.month, margin_pct: current.margin_pct, take_rate_pct: current.take_rate_pct, overdue_ratio: current.overdue_ratio }
-        : { month: "—", margin_pct: 0, take_rate_pct: 0, overdue_ratio: 0 },
+        : { month: "-", margin_pct: 0, take_rate_pct: 0, overdue_ratio: 0 },
       previous: previous
         ? { month: previous.month, margin_pct: previous.margin_pct, take_rate_pct: previous.take_rate_pct, overdue_ratio: previous.overdue_ratio }
         : null,
@@ -196,7 +196,7 @@ function buildMarkdown(
     h === "red" ? "🔴" : h === "yellow" ? "🟡" : h === "green" ? "🟢" : "⚪";
 
   const lines: string[] = [
-    `# Pricing Governance — ${periodLabel}`,
+    `# Pricing Governance - ${periodLabel}`,
     "",
     "## Portfolio Summary",
     "",
@@ -211,7 +211,7 @@ function buildMarkdown(
   ];
 
   if (p0Items.length > 0) {
-    lines.push("## 🚨 P0 Escalations — Action Required", "");
+    lines.push("## 🚨 P0 Escalations - Action Required", "");
     for (const e of p0Items) {
       lines.push(`**${e.shipper_id}** → ${ACTION_LABELS[e.recommended_action] ?? e.recommended_action} (${e.owner})`);
       lines.push(`> ${e.rationale}`);
@@ -225,19 +225,19 @@ function buildMarkdown(
     lines.push(`### ${owner} (${items.length})`);
     lines.push("");
     for (const e of items) {
-      lines.push(`- [${e.priority}] **${e.shipper_id}** — ${ACTION_LABELS[e.recommended_action] ?? e.recommended_action}`);
+      lines.push(`- [${e.priority}] **${e.shipper_id}** - ${ACTION_LABELS[e.recommended_action] ?? e.recommended_action}`);
       lines.push(`  ${e.rationale}`);
     }
     lines.push("");
   }
 
-  lines.push("## Portfolio Health — Month-on-Month", "");
+  lines.push("## Portfolio Health - Month-on-Month", "");
   lines.push("| Shipper | Health | Trend | Margin Δ | Take Rate Δ | Overdue Δ |");
   lines.push("|---------|--------|-------|----------|-------------|-----------|");
   for (const d of deltas) {
-    const m = d.deltas.margin_pct !== null ? `${d.deltas.margin_pct > 0 ? "+" : ""}${d.deltas.margin_pct}pp` : "—";
-    const t = d.deltas.take_rate_pct !== null ? `${d.deltas.take_rate_pct > 0 ? "+" : ""}${d.deltas.take_rate_pct}pp` : "—";
-    const o = d.deltas.overdue_ratio !== null ? `${d.deltas.overdue_ratio > 0 ? "+" : ""}${d.deltas.overdue_ratio}pp` : "—";
+    const m = d.deltas.margin_pct !== null ? `${d.deltas.margin_pct > 0 ? "+" : ""}${d.deltas.margin_pct}pp` : "-";
+    const t = d.deltas.take_rate_pct !== null ? `${d.deltas.take_rate_pct > 0 ? "+" : ""}${d.deltas.take_rate_pct}pp` : "-";
+    const o = d.deltas.overdue_ratio !== null ? `${d.deltas.overdue_ratio > 0 ? "+" : ""}${d.deltas.overdue_ratio}pp` : "-";
     lines.push(`| ${d.name} | ${healthIcon(d.health)} | ${trendIcon(d.trend)} | ${m} | ${t} | ${o} |`);
   }
 

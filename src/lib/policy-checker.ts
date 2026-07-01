@@ -41,7 +41,7 @@ export function checkDeal(
     });
   }
 
-  // 2. Rate card lookup — if cell not found, treat as unrateable
+  // 2. Rate card lookup - if cell not found, treat as unrateable
   const cell = lookupCell(
     rateCard,
     deal.lane,
@@ -88,7 +88,7 @@ export function checkDeal(
 export function checkShipper(shipper: Shipper): ShipperPolicyResult {
   const breaches: PolicyBreach[] = [];
 
-  // Data quality gate — if metrics are null, flag as unscored
+  // Data quality gate - if metrics are null, flag as unscored
   if (
     shipper.take_rate_pct === null &&
     shipper.ar_days === null &&
@@ -96,7 +96,7 @@ export function checkShipper(shipper: Shipper): ShipperPolicyResult {
   ) {
     breaches.push({
       rule: "data_quality",
-      detail: "take_rate_pct, ar_days, overdue_ratio all null — cannot score",
+      detail: "take_rate_pct, ar_days, overdue_ratio all null - cannot score",
     });
     return { shipper_id: shipper.shipper_id, status: "FLAGGED", breaches };
   }

@@ -12,7 +12,7 @@ export default function GuidePage() {
 
         <Section title="What problem does this solve?">
           <p>
-            In freight, pricing decisions happen fast — a sales rep quotes a rate, ops confirms a
+            In freight, pricing decisions happen fast - a sales rep quotes a rate, ops confirms a
             carrier cost, and a deal is live. Without a governance layer, two things go wrong:
             deals get priced below carrier cost (margin goes negative) and high-risk shippers
             get extended credit they can&apos;t service.
@@ -37,7 +37,7 @@ export default function GuidePage() {
               number="2"
               label="AI triage agent (Claude)"
               color="blue"
-              description="Runs only on FLAGGED deals, via POST /api/review. Uses one tool (rate card lookup) and a 3-turn reasoning loop. Returns a structured verdict — approve exception, reject, or escalate — plus a written rationale. Requires a real Anthropic API key."
+              description="Runs only on FLAGGED deals, via POST /api/review. Uses one tool (rate card lookup) and a 3-turn reasoning loop. Returns a structured verdict - approve exception, reject, or escalate - plus a written rationale. Requires a real Anthropic API key."
             />
           </div>
         </Section>
@@ -74,19 +74,19 @@ export default function GuidePage() {
                 rule: "Take rate",
                 what: "Is portfolio-level margin healthy?",
                 pass: "Take rate ≥ 5% across all active deals",
-                fail: "Account-wide margin is too thin — even if individual deals pass",
+                fail: "Account-wide margin is too thin - even if individual deals pass",
               },
               {
                 rule: "AR days",
                 what: "Is the shipper paying on time?",
                 pass: "Average days to pay ≤ 60",
-                fail: "Money is sitting in receivables too long — collections risk",
+                fail: "Money is sitting in receivables too long - collections risk",
               },
               {
                 rule: "Overdue ratio",
                 what: "What share of invoices are overdue?",
                 pass: "≤ 20% of invoice value is overdue",
-                fail: "Too much of the book is past due — active collections needed",
+                fail: "Too much of the book is past due - active collections needed",
               },
             ]}
           />
@@ -139,11 +139,11 @@ export default function GuidePage() {
               <tbody className="divide-y divide-gray-100">
                 {[
                   { key: "Healthy", desc: "Passes all deal and account checks. No action required." },
-                  { key: "Volume-strategic, thin pricing", desc: "Large volume share, flagged as strategic, but portfolio take rate is below 5%. Needs Commercial Manager review — exceptions may be justified." },
+                  { key: "Volume-strategic, thin pricing", desc: "Large volume share, flagged as strategic, but portfolio take rate is below 5%. Needs Commercial Manager review - exceptions may be justified." },
                   { key: "Collection risk, viable pricing", desc: "Pricing is fine, but AR days or overdue ratio is breached. Collections Owner action needed." },
                   { key: "Dual risk: pricing + collection", desc: "Both pricing and collection checks fail. Highest-severity account type." },
                   { key: "Lane-specific loss", desc: "Most deals pass, but one or more specific lanes are priced below floor. Surgical repricing needed." },
-                  { key: "Unscored — incomplete data", desc: "Missing take rate, AR days, or overdue ratio. Cannot be assessed until data is filled in." },
+                  { key: "Unscored - incomplete data", desc: "Missing take rate, AR days, or overdue ratio. Cannot be assessed until data is filled in." },
                 ].map((a) => (
                   <tr key={a.key} className="hover:bg-gray-50">
                     <td className="px-3 py-2.5 text-gray-700 font-medium">{a.key}</td>
@@ -155,7 +155,7 @@ export default function GuidePage() {
           </div>
         </Section>
 
-        <Section title="Action queue — what the codes mean">
+        <Section title="Action queue - what the codes mean">
           <div className="rounded border border-gray-200 overflow-hidden">
             <table className="w-full text-xs">
               <thead>
@@ -200,15 +200,15 @@ export default function GuidePage() {
               <tbody className="divide-y divide-gray-100">
                 <tr className="hover:bg-gray-50">
                   <td className="px-3 py-2.5"><code className="font-mono bg-gray-100 px-1 rounded text-gray-700">carrier_cost_floor_usd</code></td>
-                  <td className="px-3 py-2.5 text-gray-500">Minimum carrier cost — fuel cost (PKR) + fixed costs, converted at 280 PKR/USD. A 45% fuel component means fuel price swings shift only part of the floor.</td>
+                  <td className="px-3 py-2.5 text-gray-500">Minimum carrier cost - fuel cost (PKR) + fixed costs, converted at 280 PKR/USD. A 45% fuel component means fuel price swings shift only part of the floor.</td>
                 </tr>
                 <tr className="hover:bg-gray-50">
                   <td className="px-3 py-2.5"><code className="font-mono bg-gray-100 px-1 rounded text-gray-700">band_lower_usd</code></td>
-                  <td className="px-3 py-2.5 text-gray-500">floor × 1.05 — minimum viable price with 5% margin</td>
+                  <td className="px-3 py-2.5 text-gray-500">floor × 1.05 - minimum viable price with 5% margin</td>
                 </tr>
                 <tr className="hover:bg-gray-50">
                   <td className="px-3 py-2.5"><code className="font-mono bg-gray-100 px-1 rounded text-gray-700">band_upper_usd</code></td>
-                  <td className="px-3 py-2.5 text-gray-500">floor × 1.35 — ceiling above which we are over-priced vs. market</td>
+                  <td className="px-3 py-2.5 text-gray-500">floor × 1.35 - ceiling above which we are over-priced vs. market</td>
                 </tr>
               </tbody>
             </table>
@@ -225,7 +225,7 @@ export default function GuidePage() {
               {
                 n: "1",
                 label: "Schedule",
-                desc: 'Set to "Every week" → Monday → 09:00. This is the trigger — no webhook needed.',
+                desc: 'Set to "Every week" → Monday → 09:00. This is the trigger - no webhook needed.',
               },
               {
                 n: "2",
@@ -235,7 +235,7 @@ export default function GuidePage() {
               {
                 n: "3",
                 label: "Router",
-                desc: "Split into three branches — one per escalation owner. Filter condition per branch: {{2.action_queue.by_owner.`Vertical Lead`.length}} > 0 (and same for the other owners).",
+                desc: "Split into three branches - one per escalation owner. Filter condition per branch: {{2.action_queue.by_owner.`Vertical Lead`.length}} > 0 (and same for the other owners).",
               },
               {
                 n: "4a",
@@ -245,7 +245,7 @@ export default function GuidePage() {
               {
                 n: "4b",
                 label: "Gmail › Send an email  (Collections Owner branch)",
-                desc: "Same pattern — different recipient, filtered to Collections Owner items from the JSON.",
+                desc: "Same pattern - different recipient, filtered to Collections Owner items from the JSON.",
               },
               {
                 n: "4c",

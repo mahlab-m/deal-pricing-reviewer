@@ -63,7 +63,7 @@ export default function ReportPage() {
                           </span>
                           <div>
                             <span className="text-gray-800 font-medium">{e.shipper_id}</span>
-                            <span className="text-gray-300 mx-1">—</span>
+                            <span className="text-gray-300 mx-1">-</span>
                             <span className="text-gray-600">{ACTION_LABELS[e.recommended_action] ?? e.recommended_action}</span>
                             <p className="text-gray-400 mt-0.5 leading-relaxed">{e.rationale}</p>
                           </div>
@@ -79,7 +79,7 @@ export default function ReportPage() {
 
         {/* Health deltas */}
         <div className="mb-8">
-          <h2 className="text-sm font-semibold text-gray-700 mb-4">Portfolio Health — Month-on-Month</h2>
+          <h2 className="text-sm font-semibold text-gray-700 mb-4">Portfolio Health - Month-on-Month</h2>
           <div className="rounded-lg border border-gray-200 overflow-x-auto bg-white">
             <table className="w-full min-w-[600px] text-xs">
               <thead>
@@ -110,7 +110,7 @@ const ACTION_LABELS: Record<string, string> = {
 
 function DeltaRow({ delta }: { delta: HealthDelta }) {
   const fmt = (n: number | null, invert = false) => {
-    if (n === null) return <span className="text-gray-300">—</span>;
+    if (n === null) return <span className="text-gray-300">-</span>;
     const positive = invert ? n < 0 : n > 0;
     const neutral = Math.abs(n) <= 0.5;
     const color = neutral ? "text-gray-400" : positive ? "text-emerald-600" : "text-red-600";

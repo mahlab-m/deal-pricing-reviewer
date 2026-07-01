@@ -22,7 +22,7 @@ const ARCHETYPE_LABEL: Record<string, string> = {
   "dual-risk-pricing-collection":   "Dual risk: pricing + collection",
   "lane-specific-loss":             "Lane-specific loss",
   healthy:                          "Healthy",
-  "unscored-incomplete-data":       "Unscored — incomplete data",
+  "unscored-incomplete-data":       "Unscored - incomplete data",
 };
 
 export default async function ShipperPage({ params }: { params: Promise<{ id: string }> }) {
@@ -57,7 +57,7 @@ export default async function ShipperPage({ params }: { params: Promise<{ id: st
               {shipper.strategic && (
                 <span
                   className="text-xs bg-blue-50 text-blue-700 border border-blue-200 px-2 py-0.5 rounded cursor-default"
-                  title="Strategic account — pricing exceptions may be tolerated at Commercial Manager discretion."
+                  title="Strategic account - pricing exceptions may be tolerated at Commercial Manager discretion."
                 >
                   Strategic
                 </span>
@@ -78,19 +78,19 @@ export default async function ShipperPage({ params }: { params: Promise<{ id: st
         <div className="grid grid-cols-3 gap-4 mb-8">
           <MetricCard
             label="Take Rate"
-            value={shipper.take_rate_pct !== null ? `${shipper.take_rate_pct}%` : "—"}
+            value={shipper.take_rate_pct !== null ? `${shipper.take_rate_pct}%` : "-"}
             floor="Floor: 5.0%"
             status={shipper.take_rate_pct === null ? "unscored" : shipper.take_rate_pct < 5 ? "red" : shipper.take_rate_pct < 7 ? "yellow" : "green"}
           />
           <MetricCard
             label="Accounts Receivable Days (AR Days)"
-            value={shipper.ar_days !== null ? `${shipper.ar_days}d` : "—"}
+            value={shipper.ar_days !== null ? `${shipper.ar_days}d` : "-"}
             floor="Limit: 60 days"
             status={shipper.ar_days === null ? "unscored" : shipper.ar_days > 60 ? "red" : shipper.ar_days > 45 ? "yellow" : "green"}
           />
           <MetricCard
             label="Overdue Ratio"
-            value={shipper.overdue_ratio !== null ? `${shipper.overdue_ratio}%` : "—"}
+            value={shipper.overdue_ratio !== null ? `${shipper.overdue_ratio}%` : "-"}
             floor="Limit: 20%"
             status={shipper.overdue_ratio === null ? "unscored" : shipper.overdue_ratio > 20 ? "red" : shipper.overdue_ratio > 12 ? "yellow" : "green"}
           />

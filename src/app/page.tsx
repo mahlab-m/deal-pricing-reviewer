@@ -44,7 +44,7 @@ export default function PortfolioPage() {
           <h1 className="text-xl font-semibold text-gray-900">Deal &amp; Pricing Governance</h1>
           <p className="text-sm text-gray-600 mt-1 max-w-2xl">
             Deterministic policy engine that checks every deal against a USD rate card and flags
-            exceptions for AI triage. Built on Trella&apos;s freight-pricing framework — synthetic
+            exceptions for AI triage. Built on Trella&apos;s freight-pricing framework - synthetic
             data, real logic.
           </p>
           <p className="text-xs text-gray-400 mt-1">
@@ -67,9 +67,9 @@ export default function PortfolioPage() {
               <tr className="border-b border-gray-200 bg-gray-800">
                 <th className="text-left px-4 py-3 text-xs font-medium text-white uppercase tracking-wide">Shipper</th>
                 <th className="text-left px-4 py-3 text-xs font-medium text-white uppercase tracking-wide">Archetype</th>
-                <th className="text-center px-4 py-3 text-xs font-medium text-white uppercase tracking-wide" title="Pricing Health — based on deal take rate and band compliance">Pricing</th>
-                <th className="text-center px-4 py-3 text-xs font-medium text-white uppercase tracking-wide" title="Collection Health — based on AR days and overdue ratio">Collection</th>
-                <th className="text-center px-4 py-3 text-xs font-medium text-white uppercase tracking-wide" title="Capacity Health — based on deal volume and strategic flag">Capacity</th>
+                <th className="text-center px-4 py-3 text-xs font-medium text-white uppercase tracking-wide" title="Pricing Health - based on deal take rate and band compliance">Pricing</th>
+                <th className="text-center px-4 py-3 text-xs font-medium text-white uppercase tracking-wide" title="Collection Health - based on AR days and overdue ratio">Collection</th>
+                <th className="text-center px-4 py-3 text-xs font-medium text-white uppercase tracking-wide" title="Capacity Health - based on deal volume and strategic flag">Capacity</th>
                 <th className="text-center px-4 py-3 text-xs font-medium text-white uppercase tracking-wide">Deals</th>
                 <th className="px-4 py-3 bg-gray-800" />
               </tr>
@@ -129,7 +129,7 @@ const ARCHETYPE_LABEL: Record<string, string> = {
   "dual-risk-pricing-collection":    "Dual risk: pricing + collection",
   "lane-specific-loss":              "Lane-specific loss",
   healthy:                           "Healthy",
-  "unscored-incomplete-data":        "Unscored — incomplete data",
+  "unscored-incomplete-data":        "Unscored - incomplete data",
 };
 
 function StatCard({ label, value, sub, color }: {

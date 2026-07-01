@@ -4,7 +4,7 @@ import { runAllChecks } from "@/lib/policy-checker";
 import { reviewException } from "@/lib/agent";
 import { routeToActionQueue, shouldEscalate } from "@/lib/escalation-router";
 
-// Loaded once at cold start — these are static seed files
+// Loaded once at cold start - these are static seed files
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const rateCard: RateCardCell[] = require("@/data/rate-card.json");
 // eslint-disable-next-line @typescript-eslint/no-require-imports
@@ -21,12 +21,12 @@ export async function POST(req: NextRequest) {
       ? allDeals.filter((d) => requestedIds.includes(d.deal_id))
       : allDeals;
 
-    // Deterministic layer — only flagged deals proceed to the agent
+    // Deterministic layer - only flagged deals proceed to the agent
     const { dealResults } = runAllChecks(targetDeals, shippers, rateCard);
     const inPolicy = dealResults.filter((r) => r.status === "IN_POLICY");
     const flagged = dealResults.filter((r) => r.status === "FLAGGED");
 
-    // Agent layer — runs only on exceptions
+    // Agent layer - runs only on exceptions
     const reviewed = await Promise.all(
       flagged.map(async (result) => {
         const deal = allDeals.find((d) => d.deal_id === result.deal_id)!;
